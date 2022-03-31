@@ -1,0 +1,35 @@
+services:
+  #  - type: web
+  #    name: teleprompter.server
+  #    env: node
+  #    plan: free
+  #    healthCheckPath: /healthcheck
+  #    buildCommand: BUILD=1 ./render.sh server release
+  #    startCommand: ./render.sh server run-release
+  #    autoDeploy: false
+  #    envVars:
+  #      - fromGroup: .npmrc
+  #
+  #  - type: web
+  #    name: teleprompter.ws
+  #    env: node
+  #    plan: free
+  #    healthCheckPath: /healthcheck
+  #    buildCommand: BUILD=1 ./render.sh server release
+  #    startCommand: ./render.sh server run-release
+  #    autoDeploy: false
+  #    envVars:
+  #      - fromGroup: .npmrc
+
+  - type: web
+    env: static
+    name: tsdoc.static
+    routes:
+    buildCommand: BUILD=1 ./render.sh site release
+    staticPublishPath: site/build/
+    autoDeploy: false
+    envVars:
+      - fromGroup: .npmrc
+
+        #databases:
+        #  - name: teleprompter.db

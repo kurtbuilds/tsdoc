@@ -1,0 +1,3 @@
+release:
+    touch build/
+    cp index.html build/index.html
