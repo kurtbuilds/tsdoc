@@ -11,7 +11,7 @@ resource "namecheap_domain_records" "tsdoc" {
   record {
     hostname = "@"
     type = "URL301"
-    address = "www.tsdoc.io"
+    address = "https://www.tsdoc.io"
     ttl = 300
   }
 }
