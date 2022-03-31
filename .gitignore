@@ -1,0 +1,10 @@
+build/
+target/
+.env*
+!.env.example
+.terraform/
+*.tfstate
+*.tfstate.*
+*.p8
+*.pem
+.terraform.lock.hcl

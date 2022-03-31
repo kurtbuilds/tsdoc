@@ -1,0 +1,37 @@
+set dotenv-load := true
+
+export TERRAFORM_PLATFORM := "darwin_arm64"
+export TERRAFORM_NAMECHEAP_PLUGIN_VERSION := "2.1.1"
+
+help:
+    @just --list --unsorted
+
+bootstrap:
+    checkexec ~/.terraform.d/plugins/localhost/namecheap/namecheap/$TERRAFORM_NAMECHEAP_PLUGIN_VERSION/$TERRAFORM_PLATFORM/terraform-provider-namecheap -- just _install_namecheap_provider_patched
+    cd terraform && terraform init
+
+# Import existing AWS resources into terraform control
+import tf_resource_name provider_resource_id:
+    cd terraform && terraform import {{tf_resource_name}} {{provider_resource_id}}
+
+# Calculate anticipated changes from terraform
+plan tf_resource_name='':
+     cd terraform && terraform plan {{ if tf_resource_name == "" { "" } else { "-target=" + tf_resource_name } }}
+
+# Apply pending terraform changes
+apply tf_resource_name='':
+    cd terraform && terraform apply {{ if tf_resource_name == "" { "" } else { "-target=" + tf_resource_name } }}
+
+# The namecheap provider has a bug that prevents DNS from working when it's already been setup.
+# This patched version fixes it.
+_install_namecheap_provider_patched:
+    cd ../../ && git clone https://github.com/kurtbuilds/terraform-provider-namecheap.git || true
+    cd ../../terraform-provider-namecheap && git pull
+    cd ../../terraform-provider-namecheap && make install_darwin_arm64
+    @echo $(dye -g SUCCESS) Now you can use the local/namecheap/namecheap provider! Yay!
+
+up:
+    cd ../server && \
+     TYPEORM_URL=$PROD_MIGRATION_TYPEORM_URL \
+     NODE_PATH=../server/node_modules \
+     node -r esbuild-register ./node_modules/typeorm/cli.js migration:run
