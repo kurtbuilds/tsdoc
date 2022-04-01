@@ -4,7 +4,7 @@ clean:
 release:
     mkdir -p build/
     cp index.html build/index.html
-    cp -r build-cache/ build/
+    cp -r build-cache/* build/
     ls -R build
 
 run-release:
