@@ -1,7 +1,11 @@
+clean:
+    rm -rf build
+
 release:
     mkdir -p build/
     cp index.html build/index.html
     cp -r build-cache/ build/
+    ls -R build
 
 run-release:
     cd build && python3 -m http.server
