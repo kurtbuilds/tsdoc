@@ -1,3 +1,6 @@
 release:
     mkdir -p build/
     cp index.html build/index.html
+
+deploy:
+    render deploy tsdoc.static
