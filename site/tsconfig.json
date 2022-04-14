@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "src/type"
+    ],
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "jsxFactory": "h",
+    "jsx": "preserve",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+  },
+  "include": ["src"]
+}

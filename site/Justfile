@@ -1,5 +1,18 @@
+export PATH := "./node_modules/.bin:" + env_var('PATH')
+
+help:
+    @just --list --unsorted
+
+run:
+    vite
+alias r := run
+
 clean:
     rm -rf build
+
+bootstrap:
+    pnpm install
+
 
 release:
     mkdir -p build/
