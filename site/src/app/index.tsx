@@ -1,5 +1,8 @@
+import {Routes} from "./route"
+import { useLocation } from "wouter-preact"
+
 export function App() {
-    return <div>
-        Hello World
-    </div>
+    const [location, navigate] = useLocation()
+
+    return <Routes/>
 }
