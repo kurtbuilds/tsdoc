@@ -4,7 +4,7 @@ import {Navigate, Route, Routes as Switch, useParams} from "react-router-dom"
 import {Login} from "src/auth/login"
 import {UserState} from "./user_state"
 import {NotFound} from "src/app/not_found"
-import {Page} from "src/app/page"
+import {Page, useQuery} from "src/app/page"
 import {DarkModeToggle} from "src/app/theme_context"
 import * as importest from "src/importtest"
 
@@ -50,7 +50,7 @@ export function Package() {
                     <h1 className="text-bold text-2xl inline-block">
                         {params.package}
                     </h1>
-                    <a href={`/${params.package}/${params.version}/src/index.ts`}
+                    <a href={`/${params.package}/${params.version}/src/index.ts#source.100`}
                        className="text-blue-500 hover:text-blue-700">[src]</a>
                 </div>
             </div>
@@ -66,11 +66,17 @@ export function RedirectToLatest() {
 }
 
 
+interface SourceFileQuery extends Record<string, string>{
+    line: string
+}
+
 export function SourceFile() {
-    const params = useParams<PackageParams>()
+    const url_match = useParams<PackageParams>()
+    const query = useQuery<SourceFileQuery>()
+    // const line = query ? parseInt(query.line) : undefined
     const inner = importest.index
     return <div>
-        <pre className="line-numbers"><code className="language-css">{inner}</code></pre>
+        <pre className="line-numbers linkable-line-numbers" id="source"><code className="language-typescript">{inner}</code></pre>
     </div>
 }
 
