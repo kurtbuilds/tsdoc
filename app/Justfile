@@ -24,8 +24,8 @@ lint:
 fix:
     eslint src --fix
 
-test:
-    @echo $(dye -r ERROR) Not implemented
+test FILTER="":
+    vitest run {{FILTER}}
 alias t := test
 
 run:

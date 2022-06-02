@@ -1,9 +1,10 @@
-import {defineConfig, ViteDevServer} from "vite"
+import {defineConfig} from "vitest/config"
+import {ViteDevServer} from "vite"
 import {imagetools} from "vite-imagetools"
-import {join, resolve} from "path"
+import {resolve} from "path"
 import {homedir} from "os"
-import {readFileSync} from "fs"
 import react from "@vitejs/plugin-react"
+//@ts-ignore
 import history from "connect-history-api-fallback"
 import {Request, Response} from "express-serve-static-core"
 
@@ -42,18 +43,17 @@ function redirectAllCustom() {
                     //     res.write(body)
                     //     res.end()
                     // } else {
-                        const handler = history({
-                            disableDotRule: true,
-                            rewrites: [{from: /\/$/, to: () => "/index.html"}]
-                        })
-                        handler(req as Request, res as Response, next)
+                    const handler = history({
+                        disableDotRule: true,
+                        rewrites: [{from: /\/$/, to: () => "/index.html"}]
+                    })
+                    handler(req as Request, res as Response, next)
                     // }
                 })
             }
         }
     }
 }
-
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -72,9 +72,12 @@ export default defineConfig({
         target: "es2020",
     },
     plugins: [
+        //@ts-ignore
         imagetools(),
         HtmlPlugin(),
+        //@ts-ignore
         react(),
+        //@ts-ignore
         redirectAllCustom(),
     ],
     resolve: {
@@ -82,5 +85,12 @@ export default defineConfig({
             "src": resolve(__dirname, "src"),
         },
     },
+    test: {
+        include: ["src/tokenize/__tests__/index.tsx"],
+        transformMode: {
+            web: [/\.[jt]sx$/],
+        },
+        // globals: true,
+        // environment: "happy-dom"
+    },
 })
-
