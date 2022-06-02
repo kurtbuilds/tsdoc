@@ -2,6 +2,7 @@ import {Logo} from "src/app/logo"
 import {Hero} from "src/landing/hero"
 import {FooterBasic} from "src/component"
 import {Link} from "react-router-dom"
+import {DarkModeToggle} from "src/app/theme_context"
 
 
 export function MenuPopover() {
@@ -44,6 +45,9 @@ export function Footer() {
 export function Landing() {
     return <div className={"flex flex-col min-h-full w-full min-h-full"}>
         <div className="mx-auto max-w-4xl w-full">
+            <div className="flex justify-end">
+                <DarkModeToggle/>
+            </div>
 
             <h1 className="text-center font-bold mt-24 text-7xl">Typescript Docs</h1>
             <div className="max-w-xl w-full mx-auto">

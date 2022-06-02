@@ -38,7 +38,7 @@ export function Package() {
 
     return <div className="flex flex-col w-full">
         <div className="bg-gray-400 dark:bg-gray-600 p-2">
-            Site-wide navigation
+            <a className="" href="/">Site-wide navigation</a>
         </div>
         <div className="flex">
             <div className="bg-gray-300 p-2 dark:bg-gray-700">Side Bar</div>
@@ -51,7 +51,7 @@ export function Package() {
                         {params.package}
                     </h1>
                     <a href={`/${params.package}/${params.version}/src/index.ts#source.100`}
-                       className="text-blue-500 hover:text-blue-700">[src]</a>
+                       className="link">[src]</a>
                 </div>
             </div>
         </div>

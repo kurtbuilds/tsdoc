@@ -99,3 +99,7 @@ main {
 .text-semibold {
     @apply font-semibold;
 }
+
+.link {
+    @apply text-blue-500 hover:text-blue-700;
+}
