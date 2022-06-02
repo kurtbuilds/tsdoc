@@ -1,8 +1,13 @@
-import {getRegistryMetadata} from 'query-registry';
+import {getPackageManifest, getRegistryMetadata, searchPackages} from 'query-registry';
 
 (async () => {
     const metadata = await getRegistryMetadata();
 
-    // Output: 'registry'
-    console.log(metadata.db_name);
+    const results = await searchPackages({
+        query: {text: "typescript"},
+    })
+    const manifest = await getPackageManifest({ name: 'query-registry' });
+
+    console.log(JSON.stringify(manifest, null, 2));
 })();
+

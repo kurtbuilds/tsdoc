@@ -1,0 +1,72 @@
+set dotenv-load := true
+export PATH := "./node_modules/.bin:" + env_var('PATH')
+export SERVICE_NAME := "tsdoc.io.static"
+
+help:
+    @just --list --unsorted
+
+install:
+    pnpm install
+alias i := install
+
+bootstrap:
+    git submodule update --init --recursive
+    pnpm install
+
+check:
+    tsc --noEmit
+    eslint src
+alias c := check
+
+lint:
+    eslint src
+
+fix:
+    eslint src --fix
+
+test:
+    @echo $(dye -r ERROR) Not implemented
+alias t := test
+
+run:
+    vite
+alias r := run
+
+fetch:
+    node -r esbuild-register script/fetch-registry.ts
+
+alias f := fetch
+
+run-static:
+    cd build/static && http
+
+build:
+    vite build --outDir build/client
+    vite build --outDir build/server --ssr src/lib/ssr.tsx
+alias b := build
+
+watch:
+    vite build --watch --outDir build/client
+
+release:
+    NODE_ENV= pnpm install
+    vite build --outDir build
+    vite build --outDir build/server --ssr src/lib/ssr.tsx
+    # Create a mapping for node. Silly but I guess it works.
+    node script/generate_static
+    rm -rf build/server
+
+ios:
+    open ./ios/*.xcodeproj/project.xcworkspace
+
+release-ios:
+    cd ios && modenv run -p xcodebuild
+    open ios/build/Release-iphoneos/
+    @echo $(dye -c INFO) Drag the .app to the device in Xcode Device Manager
+
+run-release:
+    vite preview
+
+deploy:
+    render put-env $SERVICE_NAME .env.production
+    render deploy $SERVICE_NAME
