@@ -1,2 +1,2 @@
-import {index} from "typedoc/dist/lib/output/themes/default/partials"
+import index from "../stage/query-registry/src/index.ts?raw"
 export {index}

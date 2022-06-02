@@ -6,6 +6,7 @@ import {UserState} from "./user_state"
 import {NotFound} from "src/app/not_found"
 import {Page} from "src/app/page"
 import {DarkModeToggle} from "src/app/theme_context"
+import * as importest from "src/importtest"
 
 export function Private({children}: { children: JSX.Element }) {
     const user = UserState.use()
@@ -67,9 +68,9 @@ export function RedirectToLatest() {
 
 export function SourceFile() {
     const params = useParams<PackageParams>()
-    const inner = "p { color: red }"
+    const inner = importest.index
     return <div>
-        <pre><code className="language-css">{inner}</code></pre>
+        <pre className="line-numbers"><code className="language-css">{inner}</code></pre>
     </div>
 }
 
