@@ -4,7 +4,8 @@ import {Navigate, Route, Routes as Switch} from "react-router-dom"
 import {Login} from "src/auth/login"
 import {UserState} from "./user_state"
 import {Page} from "src/app/page"
-import {Package, RedirectToLatest, SourceFile} from "src/app/package"
+import {Package, RedirectToLatest, SourceFile} from "src/package"
+import {Function} from "src/package/function"
 
 export function Private({children}: { children: JSX.Element }) {
     const user = UserState.use()
@@ -38,7 +39,12 @@ export function Routes() {
         <Route path="/:package" element={<RedirectToLatest/>}/>
 
         <Route path="/:package/:version/" element={<Package/>}/>
+
+        {/*TODO: This needs to be generic for deep namespaces */}
+        <Route path="/:package/:version/class/:name" element={<Package/>}/>
+        <Route path="/:package/:version/function/:name" element={<Function/>}/>
+        <Route path="/:package/:version/interface/:name" element={<Package/>}/>
+        <Route path="/:package/:version/constant/:name" element={<Package/>}/>
         <Route path="/:package/:version/src/*" element={<SourceFile/>}/>
-        {/*<Route path="*" element={<NotFound/>}/>*/}
     </Switch>
 }
