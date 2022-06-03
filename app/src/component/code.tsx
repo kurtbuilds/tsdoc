@@ -39,7 +39,7 @@ export function Code({code, language, line_numbers, well, id}: CodeProps) {
 
     useEffect(() => {
         (window as any).Prism.highlightElement(ref.current)
-    }, [])
+    }, [code])
 
     return <pre className={className} id={id}>
         <code className={`language-${language}`} ref={ref}>
