@@ -2,6 +2,7 @@ import {ReactChild} from "react"
 import {Type} from "src/package/type"
 import {infallible} from "@kurtbuilds/lib"
 import { Link } from "react-router-dom"
+import {Code} from "src/component/code"
 
 interface NextToken {
     content: string,
@@ -53,8 +54,7 @@ export function tokenize(comment: string): ReactChild[] {
     while (comment) {
         const next_token = get_next_token(comment, regexes)
         if (next_token.regex_index === 0) {
-            tokens.push(<pre key={i} className="no-line-numbers"><code
-                className="language-typescript">{next_token.groups[2]}</code></pre>)
+            tokens.push(<Code key={i} well={true} code={next_token.groups[2]} language="typescript"/>)
         } else if (next_token.regex_index === 1) {
             tokens.push(<br key={i}/>)
         } else if (next_token.regex_index === 2) {

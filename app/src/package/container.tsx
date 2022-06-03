@@ -1,6 +1,6 @@
 import {Page} from "src/app/page"
 import {Sidebar} from "src/package/sidebar"
-import React, {useEffect} from "react"
+import React from "react"
 import {Constant, Func, Interface} from "src/package/type"
 import {DarkModeToggle} from "src/app/theme_context"
 
@@ -17,10 +17,6 @@ interface ContainerProps {
 
 
 export function Container({pkg, version, children, constants, interfaces, classes, functions, name}: ContainerProps) {
-    useEffect(() => {
-        (window as any).Prism.highlightAll()
-    }, [name])
-
     return <Page>
         <div className="flex w-screen">
             <Sidebar package={pkg} version={version} classes={classes}

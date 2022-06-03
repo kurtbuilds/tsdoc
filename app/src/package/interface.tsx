@@ -2,7 +2,7 @@ import {PackageParams} from "src/package/module"
 import {useParams} from "react-router-dom"
 import {typedoc} from "src/target"
 import {extract_package} from "src/package/extract"
-import {SourceButton} from "src/component/source_button"
+import {SourceButton} from "src/component/code"
 import {Container} from "src/package/container"
 import {Interface as InterfaceDeclaration} from "src/package/type"
 
@@ -22,7 +22,7 @@ export function Interface() {
     const kind = "interface"
 
     return <Container pkg={params.package!} version={params.version!} classes={classes}
-                      functions={functions} constants={constants} interfaces={interfaces}>
+                      functions={functions} constants={constants} interfaces={interfaces} name={item.name}>
         <div className="border-b-2 flex justify-between">
             <div className="flex-grow flex items-end font-mono">
                 <div className="text-gray-500 mr-2 text-sm">{kind}</div>

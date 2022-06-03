@@ -112,6 +112,9 @@ main {
     @apply font-mono bg-gray-200 dark:bg-gray-800 rounded-lg p-1;
 }
 
-pre {
-    overflow: auto;
+.well {
+    padding: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
 }

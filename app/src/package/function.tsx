@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom"
 import {tokenize, tokenize_type} from "src/tokenize"
 import {typedoc} from "src/target"
 import {extract_package} from "src/package/extract"
-import {SourceButton} from "src/component/source_button"
+import {SourceButton} from "src/component/code"
 import {Container} from "src/package/container"
 import {Func} from "src/package/type"
 
@@ -57,7 +57,7 @@ export function Function() {
         <div className="mt-3" children={comment}/>
         <div className="mt-6">
             <h3 className="text-bold text-xl border-b">Examples</h3>
-            {examples.map((example, i) => <div key={i} className="mt-2 mb-6 w-full" children={example}/>)}
+            {examples.map((example, i) => <div key={i} className="mt-2 mb-6 w-full well" children={example}/>)}
         </div>
     </Container>
 }
