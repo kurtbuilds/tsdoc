@@ -57,6 +57,7 @@ release:
     # Create a mapping for node. Silly but I guess it works.
     node -r esbuild-register script/generate-static.ts
     rm -rf build/server
+    fd . build/
 
 ios:
     open ./ios/*.xcodeproj/project.xcworkspace
