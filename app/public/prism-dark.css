@@ -33,7 +33,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 /* Code blocks */
 .dark pre[class*="language-"] {
     padding: 1em;
-    margin: .5em 0;
+    /*margin: .5em 0;*/
     overflow: auto;
 }
 
