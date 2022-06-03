@@ -1,6 +1,6 @@
 set dotenv-load := true
 export PATH := "./node_modules/.bin:" + env_var('PATH')
-export SERVICE_NAME := "tsdoc.io.static"
+export SERVICE_NAME := "tsdoc.static"
 
 help:
     @just --list --unsorted
@@ -70,5 +70,5 @@ run-release:
     vite preview
 
 deploy:
-    render put-env $SERVICE_NAME .env.production
+    #render put-env $SERVICE_NAME .env.production
     render deploy $SERVICE_NAME
