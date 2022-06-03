@@ -48,12 +48,12 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     }
 }
 
-.light pre[class*="language-"] {
-    padding: 0.75em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    border-radius: 1em;
-}
+/*.light pre[class*="language-"] {*/
+    /*padding: 0.75em;*/
+    /*margin-top: 0.5em;*/
+    /*margin-bottom: 0.5em;*/
+    /*border-radius: 1em;*/
+/*}*/
 
 .light :not(pre) > code[class*="language-"],
 .light pre[class*="language-"] {
@@ -143,7 +143,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 .light pre[data-line] {
     position: relative;
-    padding: 1em 0 1em 3em;
+    /*padding: 1em 0 1em 3em;*/
 }
 
 .light .line-highlight {
@@ -151,7 +151,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     left: 0;
     right: 0;
     padding: inherit 0;
-    margin-top: 1em; /* Same as .prism’s padding-top */
+    /*margin-top: 1em; !* Same as .prism’s padding-top *!*/
 
     background: hsla(24, 20%, 50%, .08);
     background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
