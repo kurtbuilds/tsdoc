@@ -32,6 +32,10 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 .dark :not(pre) > code[class*="language-"],
 .dark pre[class*="language-"] {
+    padding: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
     background: #2d2d2d;
 }
 
@@ -119,7 +123,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 .dark pre[data-line] {
     position: relative;
-    /*padding: 1em 0 1em 3em;*/
+    padding: 1em 0 1em 3em;
 }
 
 .dark .line-highlight {
@@ -127,7 +131,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
     left: 0;
     right: 0;
     padding: inherit 0;
-    /*margin-top: 1em; !* Same as .prism’s padding-top *!*/
+    margin-top: 1em; /* Same as .prism’s padding-top */
 
     background: hsla(24, 20%, 50%, .08);
     background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
