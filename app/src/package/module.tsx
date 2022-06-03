@@ -80,7 +80,7 @@ export function Package() {
     const {classes, functions, constants, interfaces} = extract_package()
 
     return <Container pkg={params.package!} version={params.version!} classes={classes}
-                      constants={constants} interfaces={interfaces} functions={functions}>
+                      constants={constants} interfaces={interfaces} functions={functions} name={params.package!}>
         <Introduction version={params.version!} package={params.package!} examples={examples}
                       comment={comment}/>
         <Section title="Classes" items={classes} type="class" package={params.package!}

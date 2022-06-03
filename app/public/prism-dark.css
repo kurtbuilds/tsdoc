@@ -30,15 +30,12 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 }
 
-/* Code blocks */
-.dark pre[class*="language-"] {
-    padding: 1em;
-    /*margin: .5em 0;*/
-    overflow: auto;
-}
-
 .dark :not(pre) > code[class*="language-"],
 .dark pre[class*="language-"] {
+    padding: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
     background: #2d2d2d;
 }
 

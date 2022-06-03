@@ -1,3 +1,6 @@
+@import "/public/prism-dark.css";
+@import "/public/prism-light.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +20,7 @@ body {
 
 #root {
 }
+
 #root > #loading {
     @apply h-screen;
 }
@@ -109,5 +113,5 @@ main {
 }
 
 pre {
-    font-size: 90%;
+    overflow: auto;
 }

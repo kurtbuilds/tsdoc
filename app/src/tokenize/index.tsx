@@ -59,7 +59,7 @@ export function tokenize(comment: string): ReactChild[] {
         } else if (next_token.regex_index === 2) {
             tokens.push(" ")
         } else if (next_token.regex_index === 3) {
-            tokens.push(<a key={i} href={next_token.groups[2]}>{next_token.groups[4]}</a>)
+            tokens.push(<a key={i} href={next_token.groups[2]} className="link" target="_blank" referrerPolicy="no-referrer">{next_token.groups[4]}</a>)
         } else if (next_token.regex_index === 4) {
             tokens.push(<span key={i} className="code">{next_token.groups[1]}</span>)
         } else {

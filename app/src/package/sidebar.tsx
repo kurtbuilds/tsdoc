@@ -21,10 +21,11 @@ interface SidebarGroupProps {
 export function SidebarGroup(props: SidebarGroupProps) {
     return <div className="mb-4">
         <h3 className="text-bold text-xl">{props.title}</h3>
-        {props.items.map(c => <a className="block link ml-3" key={c.name}
-                                 href={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
-            {c.name}
-        </a>)}
+        {props.items.map(c => <Link className="block link ml-3" key={c.name}
+                                    to={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
+                {c.name}
+            </Link>
+        )}
     </div>
 }
 

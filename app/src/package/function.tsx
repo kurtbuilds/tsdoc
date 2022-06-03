@@ -1,9 +1,8 @@
-import {DarkModeToggle} from "src/app/theme_context"
 import {PackageParams} from "src/package/module"
 import {useParams} from "react-router-dom"
 import {tokenize, tokenize_type} from "src/tokenize"
 import {typedoc} from "src/target"
-import {extract_function, extract_package} from "src/package/extract"
+import {extract_package} from "src/package/extract"
 import {SourceButton} from "src/component/source_button"
 import {Container} from "src/package/container"
 import {Func} from "src/package/type"
@@ -43,22 +42,22 @@ export function Function() {
     const return_type = tokenize_type(signature.type, context)
 
     return <Container pkg={params.package!} version={params.version!} classes={classes}
-                      functions={functions} constants={constants} interfaces={interfaces}>
+                      functions={functions} constants={constants} interfaces={interfaces} name={item.name}>
         <div className="border-b-2 flex justify-between">
-            <div className="flex-grow flex items-end font-mono">
-                <div className="text-gray-500 mr-2 text-sm">{kind}</div>
-                <h1 className="text-semibold text-xl inline-block">
+            <div className="flex-grow flex items-end font-mono flex-wrap">
+                <span className="text-gray-500 mr-2 word">{kind}</span>
+                <h1 className="text-semibold inline">
                     {item.name}
                 </h1>
-                <div className="inline-block">({fn_args})</div>
-                <div className="inline-block">: {return_type}</div>
+                <span className="inline">({fn_args})</span>
+                <span className="inline">: {return_type}</span>
             </div>
             <SourceButton pkg={params.package!} version={params.version!} file={fileName} line={line}/>
         </div>
         <div className="mt-3" children={comment}/>
         <div className="mt-6">
             <h3 className="text-bold text-xl border-b">Examples</h3>
-            {examples.map((example, i) => <div key={i} className="mt-2 mb-6" children={example}/>)}
+            {examples.map((example, i) => <div key={i} className="mt-2 mb-6 w-full" children={example}/>)}
         </div>
     </Container>
 }
