@@ -3,9 +3,10 @@ import {Landing} from "src/landing"
 import {Navigate, Route, Routes as Switch} from "react-router-dom"
 import {Login} from "src/auth/login"
 import {UserState} from "./user_state"
-import {Page} from "src/app/page"
-import {Package, RedirectToLatest, SourceFile} from "src/package"
+import {Package, RedirectToLatest} from "src/package/module"
 import {Function} from "src/package/function"
+import {SourceFile} from "src/package/source_file"
+import {Interface} from "src/package/interface"
 
 export function Private({children}: { children: JSX.Element }) {
     const user = UserState.use()
@@ -32,10 +33,6 @@ export function Routes() {
         <Route path="/login" element={user ? <Navigate replace to={DEFAULT_LOGGED_IN_PATH}/> : <Login/>}/>
         <Route path="/signup" element={user ? <Navigate to={DEFAULT_LOGGED_IN_PATH}/> : <Signup/>}/>
 
-        <Route path="/account" element={<Page alerts={[]} left="menu" title="Account">
-            Welcome!
-        </Page>}/>
-
         <Route path="/:package" element={<RedirectToLatest/>}/>
 
         <Route path="/:package/:version/" element={<Package/>}/>
@@ -43,8 +40,8 @@ export function Routes() {
         {/*TODO: This needs to be generic for deep namespaces */}
         <Route path="/:package/:version/class/:name" element={<Package/>}/>
         <Route path="/:package/:version/function/:name" element={<Function/>}/>
-        <Route path="/:package/:version/interface/:name" element={<Package/>}/>
+        <Route path="/:package/:version/interface/:name" element={<Interface/>}/>
         <Route path="/:package/:version/constant/:name" element={<Package/>}/>
-        <Route path="/:package/:version/src/*" element={<SourceFile/>}/>
+        <Route path="/:package/:version/file/*" element={<SourceFile/>}/>
     </Switch>
 }

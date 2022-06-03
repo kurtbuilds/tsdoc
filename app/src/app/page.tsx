@@ -1,5 +1,5 @@
-import {PageNeedsMenu, PageProps} from "src/component/page"
-import {Menu} from "src/app/menu"
+import React from "react"
+import {TopNav} from "src/app/nav"
 
 
 export function useQuery<T extends Record<string, string>>(): T {
@@ -8,6 +8,9 @@ export function useQuery<T extends Record<string, string>>(): T {
 }
 
 
-export function Page(props: PageProps) {
-    return <PageNeedsMenu {...props} Menu={Menu} className="pt-6"/>
+export function Page({children}: { children: React.ReactNode }) {
+    return <div className="flex flex-col w-full">
+        <TopNav/>
+        {children}
+    </div>
 }

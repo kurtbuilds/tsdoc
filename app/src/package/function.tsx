@@ -1,57 +1,64 @@
 import {DarkModeToggle} from "src/app/theme_context"
-import {PackageParams} from "src/package/index"
+import {PackageParams} from "src/package/module"
 import {useParams} from "react-router-dom"
-import {tokenize} from "src/tokenize"
+import {tokenize, tokenize_type} from "src/tokenize"
 import {typedoc} from "src/target"
-import {extract, extract_item} from "src/package/extract"
-import {Sidebar} from "src/package/sidebar"
+import {extract_function, extract_package} from "src/package/extract"
+import {SourceButton} from "src/component/source_button"
+import {Container} from "src/package/container"
+import {Func} from "src/package/type"
 
 interface ItemParams extends PackageParams {
     name: string
 }
 
+
 export function Function() {
     const params = useParams<ItemParams>()
 
-    const {classes, functions, constants, interfaces} = extract()
-    const item = typedoc.children.find(i => i.name === params.name)!
+    const {classes, functions, constants, interfaces} = extract_package()
+    const item: Func = typedoc.children.find(i => i.name === params.name)! as any
 
-    const extracted = extract_item(item)
-    const comment_data = item.signatures![0].comment
+    const signature = item.signatures![0]
+    const comment_data = signature.comment
     const comment = tokenize(comment_data.shortText)
-    const examples = comment_data.tags.filter(tag => tag.tag === "example")
-        .map(tag => tokenize(tag.text))
+    const examples = comment_data?.tags?.filter(tag => tag.tag === "example")
+        .map(tag => tokenize(tag.text)) ?? []
 
-    return <div className="flex flex-col w-full">
-        <div className="bg-gray-400 dark:bg-gray-600 p-2">
-            <a className="" href="/">Site-wide navigation</a>
-        </div>
-        <div className="flex">
-            <Sidebar package={params.package!} version={params.version!} classes={classes}
-                     functions={functions} constants={constants} interfaces={interfaces}
-            />
+    const {fileName, line} = item.sources![0]
 
-            <div className="flex-grow p-4">
-                <div className="flex justify-end">
-                    <DarkModeToggle/>
-                </div>
-                <div className="border-b-2 flex justify-between">
-                    <div className="flex-grow flex items-end">
-                        <div className="text-gray-500 mr-1">{item.kindString.toLowerCase()}</div>
-                        <h1 className="text-bold text-2xl inline-block flex-grow">
-                            {item.name}
-                        </h1>
-                    </div>
-                    <a href={`/${params.package}/${params.version}/src/index.ts#source.100`}
-                       className="link">[src]</a>
-                </div>
-                <div className="mt-3" children={comment}/>
-                <div className="mt-6">
-                    <h3 className="text-bold text-xl border-b">Examples</h3>
-                    {examples.map((example, i) => <div key={i} className="mt-2 mb-6" children={example}/>)}
-                </div>
+    let kind = item.kindString?.toLowerCase()
+    if ((signature.type as any).name === "Promise") {
+        kind = "async " + kind
+    }
+
+    const context = {
+        package: params.package!,
+        version: params.version!,
+    }
+    const fn_args = signature?.parameters?.map(p => {
+        return [p.name, tokenize_type(p.type, context)]
+    }).join(", ")
+
+    const return_type = tokenize_type(signature.type, context)
+
+    return <Container pkg={params.package!} version={params.version!} classes={classes}
+                      functions={functions} constants={constants} interfaces={interfaces}>
+        <div className="border-b-2 flex justify-between">
+            <div className="flex-grow flex items-end font-mono">
+                <div className="text-gray-500 mr-2 text-sm">{kind}</div>
+                <h1 className="text-semibold text-xl inline-block">
+                    {item.name}
+                </h1>
+                <div className="inline-block">({fn_args})</div>
+                <div className="inline-block">: {return_type}</div>
             </div>
+            <SourceButton pkg={params.package!} version={params.version!} file={fileName} line={line}/>
         </div>
-    </div>
-
+        <div className="mt-3" children={comment}/>
+        <div className="mt-6">
+            <h3 className="text-bold text-xl border-b">Examples</h3>
+            {examples.map((example, i) => <div key={i} className="mt-2 mb-6" children={example}/>)}
+        </div>
+    </Container>
 }

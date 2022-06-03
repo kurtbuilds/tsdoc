@@ -32,7 +32,7 @@ export function Sidebar(props: SidebarProps) {
         <div className="mb-4">
             <a className="text-bold text-xl" href={`/${props.package}/${props.version}`}>{props.package}</a>
         </div>
-        <SidebarGroup title="Subdirectories" package={props.package} version={props.version} items={[]} type="subdir"/>
+        <SidebarGroup title="Modules" package={props.package} version={props.version} items={[]} type="subdir"/>
         <SidebarGroup title="Classes" package={props.package} version={props.version} items={props.classes}
                       type="class"/>
         <SidebarGroup title="Functions" package={props.package} version={props.version} items={props.functions}

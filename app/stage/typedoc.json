@@ -54,7 +54,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/utils/errors.ts",
+							"fileName": "src/utils/errors.ts",
 							"line": 9,
 							"character": 4
 						}
@@ -118,7 +118,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
+							"fileName": "node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
 							"line": 28,
 							"character": 4
 						}
@@ -142,7 +142,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
+							"fileName": "node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
 							"line": 29,
 							"character": 4
 						}
@@ -181,7 +181,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
+							"fileName": "node_modules/.pnpm/make-error@1.3.6/node_modules/make-error/index.d.ts",
 							"line": 30,
 							"character": 4
 						}
@@ -220,7 +220,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "node_modules/.pnpm/@types+node@17.0.8/node_modules/@types/node/globals.d.ts",
+							"fileName": "node_modules/.pnpm/@types+node@17.0.38/node_modules/@types/node/globals.d.ts",
 							"line": 11,
 							"character": 4
 						}
@@ -304,7 +304,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "node_modules/.pnpm/@types+node@17.0.8/node_modules/@types/node/globals.d.ts",
+							"fileName": "node_modules/.pnpm/@types+node@17.0.38/node_modules/@types/node/globals.d.ts",
 							"line": 13,
 							"character": 4
 						}
@@ -417,7 +417,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/utils/errors.ts",
+					"fileName": "src/utils/errors.ts",
 					"line": 8,
 					"character": 13
 				}
@@ -466,7 +466,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 25,
 							"character": 4
 						}
@@ -501,7 +501,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/abbreviated-packument.ts",
+							"fileName": "src/types/abbreviated-packument.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -525,7 +525,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/abbreviated-packument.ts",
+							"fileName": "src/types/abbreviated-packument.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -548,7 +548,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 18,
 							"character": 13
 						}
@@ -576,7 +576,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/abbreviated-packument.ts",
+							"fileName": "src/types/abbreviated-packument.ts",
 							"line": 19,
 							"character": 13
 						}
@@ -599,7 +599,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -633,7 +633,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 32,
 							"character": 13
 						}
@@ -744,7 +744,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/abbreviated-packument.ts",
+					"fileName": "src/types/abbreviated-packument.ts",
 					"line": 10,
 					"character": 17
 				}
@@ -778,7 +778,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/bug-tracker.ts",
+							"fileName": "src/types/bug-tracker.ts",
 							"line": 6,
 							"character": 13
 						}
@@ -799,7 +799,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/bug-tracker.ts",
+							"fileName": "src/types/bug-tracker.ts",
 							"line": 5,
 							"character": 13
 						}
@@ -822,7 +822,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/bug-tracker.ts",
+					"fileName": "src/types/bug-tracker.ts",
 					"line": 4,
 					"character": 17
 				}
@@ -861,7 +861,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -893,7 +893,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 57,
 							"character": 13
 						}
@@ -921,7 +921,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 39,
 							"character": 13
 						}
@@ -944,7 +944,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 54,
 							"character": 13
 						}
@@ -974,7 +974,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/downloads.ts",
+					"fileName": "src/types/downloads.ts",
 					"line": 37,
 					"character": 17
 				}
@@ -1020,7 +1020,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -1047,7 +1047,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 57,
 							"character": 13
 						}
@@ -1070,7 +1070,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 54,
 							"character": 13
 						}
@@ -1094,7 +1094,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/downloads.ts",
+					"fileName": "src/types/downloads.ts",
 					"line": 49,
 					"character": 17
 				}
@@ -1140,7 +1140,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/download-period.ts",
+							"fileName": "src/types/download-period.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -1165,7 +1165,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/download-period.ts",
+							"fileName": "src/types/download-period.ts",
 							"line": 46,
 							"character": 13
 						}
@@ -1190,7 +1190,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/download-period.ts",
+					"fileName": "src/types/download-period.ts",
 					"line": 44,
 					"character": 17
 				}
@@ -1226,7 +1226,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 17,
 							"character": 13
 						}
@@ -1250,7 +1250,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 14,
 							"character": 13
 						}
@@ -1274,7 +1274,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 23,
 							"character": 4
 						}
@@ -1297,7 +1297,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 11,
 							"character": 13
 						}
@@ -1320,7 +1320,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 8,
 							"character": 13
 						}
@@ -1344,7 +1344,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+							"fileName": "src/types/dist-info.ts",
 							"line": 20,
 							"character": 13
 						}
@@ -1371,7 +1371,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/dist-info.ts",
+					"fileName": "src/types/dist-info.ts",
 					"line": 6,
 					"character": 17
 				}
@@ -1400,7 +1400,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/dist-tags.ts",
+							"fileName": "src/types/dist-tags.ts",
 							"line": 6,
 							"character": 13
 						}
@@ -1422,7 +1422,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/dist-tags.ts",
+					"fileName": "src/types/dist-tags.ts",
 					"line": 4,
 					"character": 17
 				}
@@ -1477,7 +1477,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 68,
 							"character": 13
 						}
@@ -1500,7 +1500,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 65,
 							"character": 13
 						}
@@ -1523,7 +1523,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/downloads.ts",
+					"fileName": "src/types/downloads.ts",
 					"line": 63,
 					"character": 17
 				}
@@ -1559,7 +1559,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/git-repository.ts",
+							"fileName": "src/types/git-repository.ts",
 							"line": 18,
 							"character": 13
 						}
@@ -1582,7 +1582,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/git-repository.ts",
+							"fileName": "src/types/git-repository.ts",
 							"line": 9,
 							"character": 13
 						}
@@ -1605,7 +1605,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/git-repository.ts",
+							"fileName": "src/types/git-repository.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -1629,7 +1629,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/git-repository.ts",
+					"fileName": "src/types/git-repository.ts",
 					"line": 7,
 					"character": 17
 				}
@@ -1652,7 +1652,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/npm-operational-internal.ts",
+							"fileName": "src/types/npm-operational-internal.ts",
 							"line": 2,
 							"character": 13
 						}
@@ -1672,7 +1672,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/npm-operational-internal.ts",
+							"fileName": "src/types/npm-operational-internal.ts",
 							"line": 3,
 							"character": 13
 						}
@@ -1695,7 +1695,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/npm-operational-internal.ts",
+					"fileName": "src/types/npm-operational-internal.ts",
 					"line": 1,
 					"character": 17
 				}
@@ -1734,7 +1734,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -1762,7 +1762,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -1790,7 +1790,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 10,
 							"character": 13
 						}
@@ -1813,7 +1813,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -1843,7 +1843,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/downloads.ts",
+					"fileName": "src/types/downloads.ts",
 					"line": 8,
 					"character": 17
 				}
@@ -1880,7 +1880,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 167,
 							"character": 13
 						}
@@ -1904,7 +1904,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 164,
 							"character": 13
 						}
@@ -1927,7 +1927,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 162,
 					"character": 17
 				}
@@ -1973,7 +1973,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 42,
 							"character": 13
 						}
@@ -1998,7 +1998,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 119,
 							"character": 13
 						}
@@ -2043,7 +2043,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 97,
 							"character": 13
 						}
@@ -2073,7 +2073,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -2098,7 +2098,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 85,
 							"character": 13
 						}
@@ -2125,7 +2125,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 88,
 							"character": 13
 						}
@@ -2152,7 +2152,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 131,
 							"character": 13
 						}
@@ -2194,7 +2194,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 56,
 							"character": 13
 						}
@@ -2222,7 +2222,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 140,
 							"character": 13
 						}
@@ -2249,7 +2249,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 73,
 							"character": 13
 						}
@@ -2285,7 +2285,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 149,
 							"character": 13
 						}
@@ -2309,7 +2309,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -2333,7 +2333,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 76,
 							"character": 13
 						}
@@ -2369,7 +2369,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 125,
 							"character": 13
 						}
@@ -2405,7 +2405,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 134,
 							"character": 13
 						}
@@ -2447,7 +2447,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 113,
 							"character": 13
 						}
@@ -2492,7 +2492,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 116,
 							"character": 13
 						}
@@ -2519,7 +2519,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 26,
 							"character": 13
 						}
@@ -2543,7 +2543,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -2570,7 +2570,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 29,
 							"character": 13
 						}
@@ -2594,7 +2594,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 32,
 							"character": 13
 						}
@@ -2618,7 +2618,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 94,
 							"character": 13
 						}
@@ -2648,7 +2648,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -2676,7 +2676,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 122,
 							"character": 13
 						}
@@ -2712,7 +2712,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 100,
 							"character": 13
 						}
@@ -2735,7 +2735,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 17,
 							"character": 13
 						}
@@ -2759,7 +2759,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 82,
 							"character": 13
 						}
@@ -2795,7 +2795,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 137,
 							"character": 13
 						}
@@ -2822,7 +2822,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 79,
 							"character": 13
 						}
@@ -2858,7 +2858,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 143,
 							"character": 13
 						}
@@ -2882,7 +2882,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 146,
 							"character": 13
 						}
@@ -2918,7 +2918,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 152,
 							"character": 13
 						}
@@ -2942,7 +2942,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 155,
 							"character": 13
 						}
@@ -2972,7 +2972,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 63,
 							"character": 13
 						}
@@ -3006,7 +3006,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 128,
 							"character": 13
 						}
@@ -3042,7 +3042,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 91,
 							"character": 13
 						}
@@ -3066,7 +3066,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 103,
 							"character": 13
 						}
@@ -3090,7 +3090,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 106,
 							"character": 13
 						}
@@ -3113,7 +3113,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 20,
 							"character": 13
 						}
@@ -3173,7 +3173,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/package-json.ts",
+					"fileName": "src/types/package-json.ts",
 					"line": 15,
 					"character": 17
 				}
@@ -3233,7 +3233,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 123,
 							"character": 13
 						}
@@ -3254,7 +3254,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 121,
 							"character": 13
 						}
@@ -3275,7 +3275,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 120,
 							"character": 13
 						}
@@ -3296,7 +3296,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 122,
 							"character": 13
 						}
@@ -3321,7 +3321,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 119,
 					"character": 17
 				}
@@ -3393,7 +3393,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 61,
 							"character": 13
 						}
@@ -3421,7 +3421,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 22,
 							"character": 13
 						}
@@ -3450,7 +3450,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 48,
 							"character": 13
 						}
@@ -3485,7 +3485,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 58,
 							"character": 13
 						}
@@ -3520,7 +3520,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 45,
 							"character": 13
 						}
@@ -3550,7 +3550,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -3585,7 +3585,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 42,
 							"character": 13
 						}
@@ -3615,7 +3615,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 119,
 							"character": 13
 						}
@@ -3665,7 +3665,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 97,
 							"character": 13
 						}
@@ -3700,7 +3700,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -3730,7 +3730,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 85,
 							"character": 13
 						}
@@ -3762,7 +3762,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 88,
 							"character": 13
 						}
@@ -3794,7 +3794,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 131,
 							"character": 13
 						}
@@ -3841,7 +3841,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 56,
 							"character": 13
 						}
@@ -3874,7 +3874,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 140,
 							"character": 13
 						}
@@ -3905,7 +3905,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 20,
 							"character": 13
 						}
@@ -3929,7 +3929,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 36,
 							"character": 13
 						}
@@ -3953,7 +3953,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 73,
 							"character": 13
 						}
@@ -3994,7 +3994,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 149,
 							"character": 13
 						}
@@ -4023,7 +4023,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -4052,7 +4052,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 76,
 							"character": 13
 						}
@@ -4093,7 +4093,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 125,
 							"character": 13
 						}
@@ -4139,7 +4139,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -4169,7 +4169,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 134,
 							"character": 13
 						}
@@ -4216,7 +4216,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 113,
 							"character": 13
 						}
@@ -4266,7 +4266,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 116,
 							"character": 13
 						}
@@ -4298,7 +4298,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 38,
 							"character": 13
 						}
@@ -4327,7 +4327,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 33,
 							"character": 13
 						}
@@ -4352,7 +4352,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 26,
 							"character": 13
 						}
@@ -4380,7 +4380,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 17,
 							"character": 13
 						}
@@ -4404,7 +4404,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -4436,7 +4436,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 30,
 							"character": 13
 						}
@@ -4465,7 +4465,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 32,
 							"character": 13
 						}
@@ -4494,7 +4494,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 94,
 							"character": 13
 						}
@@ -4529,7 +4529,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -4562,7 +4562,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 122,
 							"character": 13
 						}
@@ -4603,7 +4603,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 100,
 							"character": 13
 						}
@@ -4631,7 +4631,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 25,
 							"character": 13
 						}
@@ -4660,7 +4660,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 82,
 							"character": 13
 						}
@@ -4701,7 +4701,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 137,
 							"character": 13
 						}
@@ -4733,7 +4733,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 79,
 							"character": 13
 						}
@@ -4774,7 +4774,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 143,
 							"character": 13
 						}
@@ -4803,7 +4803,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 146,
 							"character": 13
 						}
@@ -4849,7 +4849,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -4874,7 +4874,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 152,
 							"character": 13
 						}
@@ -4903,7 +4903,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 155,
 							"character": 13
 						}
@@ -4938,7 +4938,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 63,
 							"character": 13
 						}
@@ -4977,7 +4977,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 128,
 							"character": 13
 						}
@@ -5018,7 +5018,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 91,
 							"character": 13
 						}
@@ -5047,7 +5047,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 103,
 							"character": 13
 						}
@@ -5076,7 +5076,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 106,
 							"character": 13
 						}
@@ -5105,7 +5105,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+							"fileName": "src/types/package-manifest.ts",
 							"line": 39,
 							"character": 13
 						}
@@ -5128,7 +5128,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 28,
 							"character": 13
 						}
@@ -5207,7 +5207,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/package-manifest.ts",
+					"fileName": "src/types/package-manifest.ts",
 					"line": 15,
 					"character": 17
 				}
@@ -5260,7 +5260,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 106,
 							"character": 13
 						}
@@ -5284,7 +5284,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 79,
 							"character": 13
 						}
@@ -5308,7 +5308,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 96,
 							"character": 13
 						}
@@ -5332,7 +5332,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 99,
 							"character": 13
 						}
@@ -5364,7 +5364,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 93,
 							"character": 13
 						}
@@ -5395,7 +5395,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 113,
 							"character": 13
 						}
@@ -5422,7 +5422,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -5451,7 +5451,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 86,
 							"character": 13
 						}
@@ -5475,7 +5475,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 76,
 							"character": 13
 						}
@@ -5498,7 +5498,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 73,
 							"character": 13
 						}
@@ -5529,7 +5529,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 68,
 					"character": 17
 				}
@@ -5568,7 +5568,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -5596,7 +5596,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -5631,7 +5631,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 42,
 							"character": 13
 						}
@@ -5667,7 +5667,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -5703,7 +5703,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 56,
 							"character": 13
 						}
@@ -5736,7 +5736,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -5770,7 +5770,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 34,
 							"character": 4
 						}
@@ -5805,7 +5805,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/packument.ts",
+							"fileName": "src/types/packument.ts",
 							"line": 28,
 							"character": 13
 						}
@@ -5830,7 +5830,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/packument.ts",
+							"fileName": "src/types/packument.ts",
 							"line": 43,
 							"character": 13
 						}
@@ -5855,7 +5855,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 26,
 							"character": 13
 						}
@@ -5883,7 +5883,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/packument.ts",
+							"fileName": "src/types/packument.ts",
 							"line": 20,
 							"character": 13
 						}
@@ -5907,7 +5907,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -5939,7 +5939,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/packument.ts",
+							"fileName": "src/types/packument.ts",
 							"line": 40,
 							"character": 13
 						}
@@ -5974,7 +5974,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -6006,7 +6006,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -6035,7 +6035,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 152,
 							"character": 13
 						}
@@ -6064,7 +6064,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 155,
 							"character": 13
 						}
@@ -6099,7 +6099,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 63,
 							"character": 13
 						}
@@ -6143,7 +6143,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 41,
 							"character": 13
 						}
@@ -6173,7 +6173,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -6219,7 +6219,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 48,
 							"character": 13
 						}
@@ -6266,7 +6266,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/packument.ts",
+							"fileName": "src/types/packument.ts",
 							"line": 37,
 							"character": 13
 						}
@@ -6321,7 +6321,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/packument.ts",
+					"fileName": "src/types/packument.ts",
 					"line": 15,
 					"character": 17
 				}
@@ -6355,7 +6355,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/person.ts",
+							"fileName": "src/types/person.ts",
 							"line": 7,
 							"character": 13
 						}
@@ -6376,7 +6376,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/person.ts",
+							"fileName": "src/types/person.ts",
 							"line": 5,
 							"character": 13
 						}
@@ -6397,7 +6397,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/person.ts",
+							"fileName": "src/types/person.ts",
 							"line": 8,
 							"character": 13
 						}
@@ -6418,7 +6418,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/person.ts",
+							"fileName": "src/types/person.ts",
 							"line": 6,
 							"character": 13
 						}
@@ -6443,7 +6443,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/person.ts",
+					"fileName": "src/types/person.ts",
 					"line": 4,
 					"character": 17
 				}
@@ -6484,7 +6484,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 25,
 							"character": 4
 						}
@@ -6508,7 +6508,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 18,
 							"character": 13
 						}
@@ -6531,7 +6531,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -6560,7 +6560,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+							"fileName": "src/types/raw-abbreviated-packument.ts",
 							"line": 32,
 							"character": 13
 						}
@@ -6663,7 +6663,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/raw-abbreviated-packument.ts",
+					"fileName": "src/types/raw-abbreviated-packument.ts",
 					"line": 10,
 					"character": 17
 				}
@@ -6726,7 +6726,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 61,
 							"character": 13
 						}
@@ -6749,7 +6749,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 22,
 							"character": 13
 						}
@@ -6773,7 +6773,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 48,
 							"character": 13
 						}
@@ -6803,7 +6803,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 58,
 							"character": 13
 						}
@@ -6833,7 +6833,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 45,
 							"character": 13
 						}
@@ -6858,7 +6858,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -6888,7 +6888,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 42,
 							"character": 13
 						}
@@ -6918,7 +6918,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 119,
 							"character": 13
 						}
@@ -6968,7 +6968,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 97,
 							"character": 13
 						}
@@ -7003,7 +7003,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -7033,7 +7033,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 85,
 							"character": 13
 						}
@@ -7065,7 +7065,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 88,
 							"character": 13
 						}
@@ -7097,7 +7097,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 131,
 							"character": 13
 						}
@@ -7144,7 +7144,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 56,
 							"character": 13
 						}
@@ -7177,7 +7177,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 140,
 							"character": 13
 						}
@@ -7209,7 +7209,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 73,
 							"character": 13
 						}
@@ -7250,7 +7250,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 149,
 							"character": 13
 						}
@@ -7279,7 +7279,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -7308,7 +7308,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 76,
 							"character": 13
 						}
@@ -7349,7 +7349,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 125,
 							"character": 13
 						}
@@ -7395,7 +7395,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -7420,7 +7420,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 134,
 							"character": 13
 						}
@@ -7467,7 +7467,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 113,
 							"character": 13
 						}
@@ -7517,7 +7517,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 116,
 							"character": 13
 						}
@@ -7549,7 +7549,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 38,
 							"character": 13
 						}
@@ -7573,7 +7573,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 26,
 							"character": 13
 						}
@@ -7602,7 +7602,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -7634,7 +7634,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 29,
 							"character": 13
 						}
@@ -7663,7 +7663,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 32,
 							"character": 13
 						}
@@ -7692,7 +7692,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 94,
 							"character": 13
 						}
@@ -7727,7 +7727,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -7760,7 +7760,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 122,
 							"character": 13
 						}
@@ -7801,7 +7801,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 100,
 							"character": 13
 						}
@@ -7829,7 +7829,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 25,
 							"character": 13
 						}
@@ -7858,7 +7858,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 82,
 							"character": 13
 						}
@@ -7899,7 +7899,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 137,
 							"character": 13
 						}
@@ -7931,7 +7931,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 79,
 							"character": 13
 						}
@@ -7972,7 +7972,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 143,
 							"character": 13
 						}
@@ -8001,7 +8001,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 146,
 							"character": 13
 						}
@@ -8042,7 +8042,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 152,
 							"character": 13
 						}
@@ -8071,7 +8071,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 155,
 							"character": 13
 						}
@@ -8106,7 +8106,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 63,
 							"character": 13
 						}
@@ -8145,7 +8145,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 128,
 							"character": 13
 						}
@@ -8186,7 +8186,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 91,
 							"character": 13
 						}
@@ -8215,7 +8215,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 103,
 							"character": 13
 						}
@@ -8244,7 +8244,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 106,
 							"character": 13
 						}
@@ -8272,7 +8272,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+							"fileName": "src/types/raw-package-manifest.ts",
 							"line": 28,
 							"character": 13
 						}
@@ -8345,7 +8345,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/raw-package-manifest.ts",
+					"fileName": "src/types/raw-package-manifest.ts",
 					"line": 20,
 					"character": 17
 				}
@@ -8410,7 +8410,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -8433,7 +8433,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -8463,7 +8463,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 42,
 							"character": 13
 						}
@@ -8498,7 +8498,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 70,
 							"character": 13
 						}
@@ -8533,7 +8533,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 56,
 							"character": 13
 						}
@@ -8565,7 +8565,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -8598,7 +8598,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 34,
 							"character": 4
 						}
@@ -8623,7 +8623,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 26,
 							"character": 13
 						}
@@ -8651,7 +8651,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -8682,7 +8682,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 29,
 							"character": 13
 						}
@@ -8716,7 +8716,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 49,
 							"character": 13
 						}
@@ -8747,7 +8747,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -8771,7 +8771,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 152,
 							"character": 13
 						}
@@ -8799,7 +8799,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 155,
 							"character": 13
 						}
@@ -8833,7 +8833,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/package-json.ts",
+							"fileName": "src/types/package-json.ts",
 							"line": 63,
 							"character": 13
 						}
@@ -8876,7 +8876,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 41,
 							"character": 13
 						}
@@ -8901,7 +8901,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -8942,7 +8942,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+							"fileName": "src/types/raw-packument.ts",
 							"line": 48,
 							"character": 13
 						}
@@ -8994,7 +8994,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+					"fileName": "src/types/raw-packument.ts",
 					"line": 19,
 					"character": 17
 				}
@@ -9043,7 +9043,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -9066,7 +9066,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 27,
 							"character": 13
 						}
@@ -9089,7 +9089,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/downloads.ts",
+							"fileName": "src/types/downloads.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -9113,7 +9113,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/downloads.ts",
+					"fileName": "src/types/downloads.ts",
 					"line": 19,
 					"character": 17
 				}
@@ -9164,7 +9164,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -9184,7 +9184,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 16,
 							"character": 13
 						}
@@ -9204,7 +9204,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 22,
 							"character": 13
 						}
@@ -9224,7 +9224,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 18,
 							"character": 13
 						}
@@ -9247,7 +9247,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 11,
 							"character": 13
 						}
@@ -9267,7 +9267,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 20,
 							"character": 13
 						}
@@ -9287,7 +9287,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 17,
 							"character": 13
 						}
@@ -9307,7 +9307,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -9327,7 +9327,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 13,
 							"character": 13
 						}
@@ -9347,7 +9347,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 19,
 							"character": 13
 						}
@@ -9367,7 +9367,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -9388,7 +9388,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 15,
 							"character": 13
 						}
@@ -9408,7 +9408,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 25,
 							"character": 13
 						}
@@ -9429,7 +9429,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 14,
 							"character": 13
 						}
@@ -9449,7 +9449,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 23,
 							"character": 13
 						}
@@ -9485,7 +9485,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+					"fileName": "src/types/registry-metadata.ts",
 					"line": 9,
 					"character": 17
 				}
@@ -9508,7 +9508,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 29,
 							"character": 13
 						}
@@ -9530,7 +9530,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+					"fileName": "src/types/registry-metadata.ts",
 					"line": 28,
 					"character": 17
 				}
@@ -9553,7 +9553,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 34,
 							"character": 13
 						}
@@ -9573,7 +9573,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -9593,7 +9593,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+							"fileName": "src/types/registry-metadata.ts",
 							"line": 33,
 							"character": 13
 						}
@@ -9617,7 +9617,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/registry-metadata.ts",
+					"fileName": "src/types/registry-metadata.ts",
 					"line": 32,
 					"character": 17
 				}
@@ -9653,7 +9653,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/repository.ts",
+							"fileName": "src/types/repository.ts",
 							"line": 18,
 							"character": 13
 						}
@@ -9677,7 +9677,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/repository.ts",
+							"fileName": "src/types/repository.ts",
 							"line": 9,
 							"character": 13
 						}
@@ -9700,7 +9700,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/repository.ts",
+							"fileName": "src/types/repository.ts",
 							"line": 12,
 							"character": 13
 						}
@@ -9724,7 +9724,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/repository.ts",
+					"fileName": "src/types/repository.ts",
 					"line": 7,
 					"character": 17
 				}
@@ -9760,7 +9760,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 41,
 							"character": 13
 						}
@@ -9784,7 +9784,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 50,
 							"character": 13
 						}
@@ -9808,7 +9808,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 47,
 							"character": 13
 						}
@@ -9832,7 +9832,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 44,
 							"character": 13
 						}
@@ -9856,7 +9856,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 38,
 							"character": 13
 						}
@@ -9886,7 +9886,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+							"fileName": "src/types/search-criteria.ts",
 							"line": 35,
 							"character": 13
 						}
@@ -9913,7 +9913,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-criteria.ts",
+					"fileName": "src/types/search-criteria.ts",
 					"line": 6,
 					"character": 17
 				}
@@ -9963,7 +9963,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 58,
 							"character": 13
 						}
@@ -9993,7 +9993,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 41,
 							"character": 13
 						}
@@ -10023,7 +10023,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 48,
 							"character": 13
 						}
@@ -10047,7 +10047,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 51,
 							"character": 13
 						}
@@ -10072,7 +10072,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 35,
 					"character": 17
 				}
@@ -10117,7 +10117,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 15,
 							"character": 13
 						}
@@ -10144,7 +10144,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 24,
 							"character": 13
 						}
@@ -10167,7 +10167,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 21,
 							"character": 13
 						}
@@ -10191,7 +10191,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 9,
 					"character": 17
 				}
@@ -10232,7 +10232,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 141,
 							"character": 13
 						}
@@ -10256,7 +10256,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 134,
 							"character": 13
 						}
@@ -10279,7 +10279,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 132,
 					"character": 17
 				}
@@ -10308,7 +10308,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 156,
 							"character": 13
 						}
@@ -10331,7 +10331,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 153,
 							"character": 13
 						}
@@ -10354,7 +10354,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/search-results.ts",
+							"fileName": "src/types/search-results.ts",
 							"line": 150,
 							"character": 13
 						}
@@ -10378,7 +10378,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/search-results.ts",
+					"fileName": "src/types/search-results.ts",
 					"line": 148,
 					"character": 17
 				}
@@ -10407,7 +10407,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/versions-to-timestamps.ts",
+							"fileName": "src/types/versions-to-timestamps.ts",
 							"line": 6,
 							"character": 13
 						}
@@ -10430,7 +10430,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "stage/node-query-registry/src/types/versions-to-timestamps.ts",
+							"fileName": "src/types/versions-to-timestamps.ts",
 							"line": 9,
 							"character": 13
 						}
@@ -10453,7 +10453,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/versions-to-timestamps.ts",
+					"fileName": "src/types/versions-to-timestamps.ts",
 					"line": 4,
 					"character": 17
 				}
@@ -10496,7 +10496,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/download-period.ts",
+					"fileName": "src/types/download-period.ts",
 					"line": 24,
 					"character": 12
 				}
@@ -10552,7 +10552,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/download-period.ts",
+					"fileName": "src/types/download-period.ts",
 					"line": 18,
 					"character": 12
 				}
@@ -10608,7 +10608,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/types/raw-packument.ts",
+					"fileName": "src/types/raw-packument.ts",
 					"line": 66,
 					"character": 12
 				}
@@ -10703,7 +10703,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/utils/errors.ts",
+					"fileName": "src/utils/errors.ts",
 					"line": 30,
 					"character": 13
 				}
@@ -10738,7 +10738,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/utils/errors.ts",
+					"fileName": "src/utils/errors.ts",
 					"line": 37,
 					"character": 13
 				}
@@ -10786,7 +10786,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/data/registries.ts",
+					"fileName": "src/data/registries.ts",
 					"line": 18,
 					"character": 13
 				}
@@ -10816,7 +10816,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/data/registries.ts",
+					"fileName": "src/data/registries.ts",
 					"line": 6,
 					"character": 13
 				}
@@ -10846,7 +10846,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/data/registries.ts",
+					"fileName": "src/data/registries.ts",
 					"line": 40,
 					"character": 13
 				}
@@ -10880,7 +10880,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/data/registries.ts",
+					"fileName": "src/data/registries.ts",
 					"line": 33,
 					"character": 13
 				}
@@ -10913,7 +10913,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/data/registries.ts",
+					"fileName": "src/data/registries.ts",
 					"line": 25,
 					"character": 13
 				}
@@ -10932,7 +10932,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-abbreviated-packument.ts",
+					"fileName": "src/endpoints/get-abbreviated-packument.ts",
 					"line": 36,
 					"character": 22
 				}
@@ -10999,7 +10999,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-abbreviated-packument.ts",
 													"line": 45,
 													"character": 4
 												}
@@ -11019,7 +11019,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-abbreviated-packument.ts",
 													"line": 44,
 													"character": 4
 												}
@@ -11040,7 +11040,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-abbreviated-packument.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -11060,7 +11060,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-abbreviated-packument.ts",
 													"line": 43,
 													"character": 4
 												}
@@ -11111,7 +11111,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-daily-package-downloads.ts",
+					"fileName": "src/endpoints/get-daily-package-downloads.ts",
 					"line": 55,
 					"character": 22
 				}
@@ -11178,7 +11178,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-package-downloads.ts",
+													"fileName": "src/endpoints/get-daily-package-downloads.ts",
 													"line": 64,
 													"character": 4
 												}
@@ -11196,7 +11196,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-package-downloads.ts",
+													"fileName": "src/endpoints/get-daily-package-downloads.ts",
 													"line": 61,
 													"character": 4
 												}
@@ -11216,7 +11216,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-package-downloads.ts",
+													"fileName": "src/endpoints/get-daily-package-downloads.ts",
 													"line": 62,
 													"character": 4
 												}
@@ -11237,7 +11237,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-package-downloads.ts",
+													"fileName": "src/endpoints/get-daily-package-downloads.ts",
 													"line": 63,
 													"character": 4
 												}
@@ -11288,7 +11288,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-daily-registry-downloads.ts",
+					"fileName": "src/endpoints/get-daily-registry-downloads.ts",
 					"line": 47,
 					"character": 22
 				}
@@ -11355,7 +11355,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-registry-downloads.ts",
+													"fileName": "src/endpoints/get-daily-registry-downloads.ts",
 													"line": 54,
 													"character": 4
 												}
@@ -11375,7 +11375,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-registry-downloads.ts",
+													"fileName": "src/endpoints/get-daily-registry-downloads.ts",
 													"line": 52,
 													"character": 4
 												}
@@ -11396,7 +11396,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-daily-registry-downloads.ts",
+													"fileName": "src/endpoints/get-daily-registry-downloads.ts",
 													"line": 53,
 													"character": 4
 												}
@@ -11447,7 +11447,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-package-downloads.ts",
+					"fileName": "src/endpoints/get-package-downloads.ts",
 					"line": 55,
 					"character": 22
 				}
@@ -11514,7 +11514,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-downloads.ts",
+													"fileName": "src/endpoints/get-package-downloads.ts",
 													"line": 64,
 													"character": 4
 												}
@@ -11532,7 +11532,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-downloads.ts",
+													"fileName": "src/endpoints/get-package-downloads.ts",
 													"line": 61,
 													"character": 4
 												}
@@ -11552,7 +11552,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-downloads.ts",
+													"fileName": "src/endpoints/get-package-downloads.ts",
 													"line": 62,
 													"character": 4
 												}
@@ -11573,7 +11573,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-downloads.ts",
+													"fileName": "src/endpoints/get-package-downloads.ts",
 													"line": 63,
 													"character": 4
 												}
@@ -11624,7 +11624,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+					"fileName": "src/endpoints/get-package-manifest.ts",
 					"line": 52,
 					"character": 22
 				}
@@ -11691,7 +11691,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+													"fileName": "src/endpoints/get-package-manifest.ts",
 													"line": 63,
 													"character": 4
 												}
@@ -11711,7 +11711,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+													"fileName": "src/endpoints/get-package-manifest.ts",
 													"line": 62,
 													"character": 4
 												}
@@ -11732,7 +11732,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+													"fileName": "src/endpoints/get-package-manifest.ts",
 													"line": 59,
 													"character": 4
 												}
@@ -11752,7 +11752,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+													"fileName": "src/endpoints/get-package-manifest.ts",
 													"line": 61,
 													"character": 4
 												}
@@ -11772,7 +11772,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-package-manifest.ts",
+													"fileName": "src/endpoints/get-package-manifest.ts",
 													"line": 60,
 													"character": 4
 												}
@@ -11824,7 +11824,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-packument.ts",
+					"fileName": "src/endpoints/get-packument.ts",
 					"line": 33,
 					"character": 22
 				}
@@ -11887,7 +11887,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-packument.ts",
+													"fileName": "src/endpoints/get-packument.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -11907,7 +11907,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-packument.ts",
+													"fileName": "src/endpoints/get-packument.ts",
 													"line": 41,
 													"character": 4
 												}
@@ -11928,7 +11928,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-packument.ts",
+													"fileName": "src/endpoints/get-packument.ts",
 													"line": 39,
 													"character": 4
 												}
@@ -11948,7 +11948,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-packument.ts",
+													"fileName": "src/endpoints/get-packument.ts",
 													"line": 40,
 													"character": 4
 												}
@@ -11999,7 +11999,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-raw-abbreviated-packument.ts",
+					"fileName": "src/endpoints/get-raw-abbreviated-packument.ts",
 					"line": 34,
 					"character": 22
 				}
@@ -12059,7 +12059,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-raw-abbreviated-packument.ts",
 													"line": 43,
 													"character": 4
 												}
@@ -12079,7 +12079,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-raw-abbreviated-packument.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -12100,7 +12100,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-raw-abbreviated-packument.ts",
 													"line": 40,
 													"character": 4
 												}
@@ -12120,7 +12120,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-abbreviated-packument.ts",
+													"fileName": "src/endpoints/get-raw-abbreviated-packument.ts",
 													"line": 41,
 													"character": 4
 												}
@@ -12171,7 +12171,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+					"fileName": "src/endpoints/get-raw-package-manifest.ts",
 					"line": 52,
 					"character": 22
 				}
@@ -12235,7 +12235,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+													"fileName": "src/endpoints/get-raw-package-manifest.ts",
 													"line": 63,
 													"character": 4
 												}
@@ -12255,7 +12255,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+													"fileName": "src/endpoints/get-raw-package-manifest.ts",
 													"line": 62,
 													"character": 4
 												}
@@ -12276,7 +12276,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+													"fileName": "src/endpoints/get-raw-package-manifest.ts",
 													"line": 59,
 													"character": 4
 												}
@@ -12296,7 +12296,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+													"fileName": "src/endpoints/get-raw-package-manifest.ts",
 													"line": 61,
 													"character": 4
 												}
@@ -12316,7 +12316,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-package-manifest.ts",
+													"fileName": "src/endpoints/get-raw-package-manifest.ts",
 													"line": 60,
 													"character": 4
 												}
@@ -12368,7 +12368,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-raw-packument.ts",
+					"fileName": "src/endpoints/get-raw-packument.ts",
 					"line": 34,
 					"character": 22
 				}
@@ -12428,7 +12428,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-packument.ts",
+													"fileName": "src/endpoints/get-raw-packument.ts",
 													"line": 43,
 													"character": 4
 												}
@@ -12448,7 +12448,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-packument.ts",
+													"fileName": "src/endpoints/get-raw-packument.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -12469,7 +12469,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-packument.ts",
+													"fileName": "src/endpoints/get-raw-packument.ts",
 													"line": 40,
 													"character": 4
 												}
@@ -12489,7 +12489,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-raw-packument.ts",
+													"fileName": "src/endpoints/get-raw-packument.ts",
 													"line": 41,
 													"character": 4
 												}
@@ -12540,7 +12540,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-registry-downloads.ts",
+					"fileName": "src/endpoints/get-registry-downloads.ts",
 					"line": 47,
 					"character": 22
 				}
@@ -12607,7 +12607,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-registry-downloads.ts",
+													"fileName": "src/endpoints/get-registry-downloads.ts",
 													"line": 54,
 													"character": 4
 												}
@@ -12627,7 +12627,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-registry-downloads.ts",
+													"fileName": "src/endpoints/get-registry-downloads.ts",
 													"line": 52,
 													"character": 4
 												}
@@ -12648,7 +12648,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-registry-downloads.ts",
+													"fileName": "src/endpoints/get-registry-downloads.ts",
 													"line": 53,
 													"character": 4
 												}
@@ -12699,7 +12699,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/get-registry-metadata.ts",
+					"fileName": "src/endpoints/get-registry-metadata.ts",
 					"line": 38,
 					"character": 22
 				}
@@ -12758,7 +12758,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-registry-metadata.ts",
+													"fileName": "src/endpoints/get-registry-metadata.ts",
 													"line": 43,
 													"character": 4
 												}
@@ -12778,7 +12778,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/get-registry-metadata.ts",
+													"fileName": "src/endpoints/get-registry-metadata.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -12828,7 +12828,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "stage/node-query-registry/src/endpoints/search-packages.ts",
+					"fileName": "src/endpoints/search-packages.ts",
 					"line": 33,
 					"character": 22
 				}
@@ -12891,7 +12891,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/search-packages.ts",
+													"fileName": "src/endpoints/search-packages.ts",
 													"line": 42,
 													"character": 4
 												}
@@ -12911,7 +12911,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/search-packages.ts",
+													"fileName": "src/endpoints/search-packages.ts",
 													"line": 41,
 													"character": 4
 												}
@@ -12932,7 +12932,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/search-packages.ts",
+													"fileName": "src/endpoints/search-packages.ts",
 													"line": 39,
 													"character": 4
 												}
@@ -12953,7 +12953,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "stage/node-query-registry/src/endpoints/search-packages.ts",
+													"fileName": "src/endpoints/search-packages.ts",
 													"line": 40,
 													"character": 4
 												}
@@ -13086,7 +13086,7 @@
 	],
 	"sources": [
 		{
-			"fileName": "stage/node-query-registry/src/index.ts",
+			"fileName": "src/index.ts",
 			"line": 92,
 			"character": 0
 		}

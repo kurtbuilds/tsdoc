@@ -1,12 +1,11 @@
 import {defineConfig} from "vitest/config"
-import {ViteDevServer} from "vite"
 import {imagetools} from "vite-imagetools"
 import {resolve} from "path"
 import {homedir} from "os"
 import react from "@vitejs/plugin-react"
-//@ts-ignore
 import history from "connect-history-api-fallback"
-import {Request, Response} from "express-serve-static-core"
+import {NextFunction, Request, Response} from "express-serve-static-core"
+import {IncomingMessage, ServerResponse} from "http"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -32,9 +31,9 @@ const HtmlPlugin = () => {
 function redirectAllCustom() {
     return {
         name: "log-url",
-        configureServer(server: ViteDevServer) {
+        configureServer(server: any) {
             return () => {
-                server.middlewares.use((req, res, next) => {
+                server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
                     // if (req.url?.endsWith(".ts")) {
                     //     const path = join(__dirname, "public", req.url!, "./index.html")
                     //     console.log(path)
@@ -86,11 +85,10 @@ export default defineConfig({
         },
     },
     test: {
-        include: ["src/tokenize/__tests__/index.tsx"],
+        // match ts or tsx files
+        include: ["src/**/__tests__/*.{ts,tsx}"],
         transformMode: {
             web: [/\.[jt]sx$/],
         },
-        // globals: true,
-        // environment: "happy-dom"
     },
 })

@@ -34,6 +34,8 @@ alias r := run
 
 fetch:
     node -r esbuild-register script/fetch-registry.ts
+    vite build --outDir build/server --ssr src/lib/ssr.tsx
+    node -r esbuild-register script/generate-static.ts stage/static_urls.txt public
 
 alias f := fetch
 
@@ -53,7 +55,7 @@ release:
     vite build --outDir build
     vite build --outDir build/server --ssr src/lib/ssr.tsx
     # Create a mapping for node. Silly but I guess it works.
-    node script/generate_static
+    node -r esbuild-register script/generate-static.ts
     rm -rf build/server
 
 ios:

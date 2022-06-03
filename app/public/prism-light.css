@@ -11,8 +11,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     color: black;
     background: none;
     text-shadow: 0 1px white;
+    font-size: 0.85rem;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1em;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -230,7 +230,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     position: absolute;
     pointer-events: none;
     top: 0;
-    font-size: 100%;
     left: -3.8em;
     width: 3em; /* works for line-numbers below 1000 lines */
     letter-spacing: -1px;
