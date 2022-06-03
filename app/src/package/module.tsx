@@ -1,4 +1,4 @@
-import {Navigate, useParams} from "react-router-dom"
+import {Link, Navigate, useParams} from "react-router-dom"
 import {tokenize} from "src/tokenize"
 import typedoc from "../../stage/typedoc.json"
 import {DarkModeToggle} from "src/app/theme_context"
@@ -56,10 +56,10 @@ export function Section(props: SectionProps) {
             {props.items.map(c => {
                     const description = tokenize(c.comment?.shortText ?? "")
                     return <>
-                        <a className="link" key={c.name}
-                           href={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
+                        <Link className="link" key={c.name}
+                           to={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
                             {c.name}
-                        </a>
+                        </Link>
                         <div className="col-span-3">{description}</div>
                     </>
                 }

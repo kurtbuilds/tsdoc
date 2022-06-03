@@ -1,6 +1,7 @@
 import {ReactChild} from "react"
 import {Type} from "src/package/type"
 import {infallible} from "@kurtbuilds/lib"
+import { Link } from "react-router-dom"
 
 interface NextToken {
     content: string,
@@ -96,7 +97,7 @@ export function tokenize_type(type: Type, context: Context): ReactChild {
             const middle = intersperse(type.typeArguments.map(x => tokenize_type(x, context)), ", ")
             return <span>{type.name}&lt;{middle}&gt;</span>
         } else {
-            return <a key={type.name} className="hover:text-gray-400" href={`/${context.package}/${context.version}/interface/${type.name}`}>{type.name}</a>
+            return <Link key={type.name} className="hover:text-gray-400" to={`/${context.package}/${context.version}/interface/${type.name}`}>{type.name}</Link>
         }
     } else if (type.type === "reflection") {
         return <span>Unsupported</span>
