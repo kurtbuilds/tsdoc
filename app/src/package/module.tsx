@@ -53,17 +53,17 @@ export function Section(props: SectionProps) {
     return <div className="mb-4">
         <h3 className="text-bold text-xl border-b">{props.title}</h3>
         <div className="grid-cols-4 grid space-y-1">
-            {props.items.map(c => {
+            {props.items.map((c, i) => {
                     const description = tokenize(c.comment?.shortText ?? "")
-                    return <>
+                    return [
                         <Link className="link" key={c.name}
                            to={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
                             {c.name}
-                        </Link>
-                        <div className="col-span-3">{description}</div>
-                    </>
+                        </Link>,
+                        <div className="col-span-3" key={i}>{description}</div>
+                    ]
                 }
-            )}
+            ).flat()}
         </div>
     </div>
 }

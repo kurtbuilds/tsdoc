@@ -27,7 +27,6 @@ interface CodeProps {
 }
 
 export function Code({code, language, line_numbers, well, id}: CodeProps) {
-    console.log("rendering code for", language)
     if (line_numbers && !id) {
         throw new Error("line_numbers requires id")
     }
@@ -40,10 +39,17 @@ export function Code({code, language, line_numbers, well, id}: CodeProps) {
 
     useEffect(() => {
         console.log("Calling prism for", ref.current);
-        (window as any).Prism.highlightElement(ref.current)
+        // (window as any).Prism.highlightElement(ref.current)
     }, [])
 
     return <pre className={className} id={id} ref={ref}>
-        <code className={`language-${language}`}>{code}</code>
+        <code className={`language-${language}`}>
+            {code}
+        </code>
     </pre>
+    // return <pre className={className} id={id} ref={ref}>
+    //     <code className={`language-${language}`}>
+    //         {code}
+    //     </code>
+    // </pre>
 }
