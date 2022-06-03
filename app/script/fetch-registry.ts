@@ -132,7 +132,7 @@ function generate_static_urls_file(name: string, version: string) {
     ]
     for (const [cur, dirs, files] of walk(`stage/${name}/src`)) {
         for (const file of files) {
-            paths.push(path.join("/", name, version, "src", path.relative(`stage/${name}/src`, file)))
+            paths.push(path.join("/", name, version, "file", "src", path.relative(`stage/${name}/src`, file)))
         }
     }
     fs.writeFileSync("stage/static_urls.txt", paths.join("\n"))
