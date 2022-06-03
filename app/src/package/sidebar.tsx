@@ -1,12 +1,13 @@
-import {CodeObject} from "src/package/type"
+import {Link} from "react-router-dom"
+import {Class, Constant, Func, Interface, Item} from "src/package/type"
 
 export interface SidebarProps {
     package: string
     version: string
-    classes: CodeObject[],
-    functions: CodeObject[],
-    constants: CodeObject[],
-    interfaces: CodeObject[],
+    classes: Class[],
+    functions: Func[],
+    constants: Constant[],
+    interfaces: Interface[],
 }
 
 interface SidebarGroupProps {
@@ -14,7 +15,7 @@ interface SidebarGroupProps {
     package: string
     version: string
     type: string
-    items: CodeObject[]
+    items: Item[]
 }
 
 export function SidebarGroup(props: SidebarGroupProps) {
@@ -30,7 +31,7 @@ export function SidebarGroup(props: SidebarGroupProps) {
 export function Sidebar(props: SidebarProps) {
     return <div className="bg-gray-300 p-2 dark:bg-gray-700 pt-4">
         <div className="mb-4">
-            <a className="text-bold text-xl" href={`/${props.package}/${props.version}`}>{props.package}</a>
+            <Link className="text-bold text-xl" to={`/${props.package}/${props.version}`}>{props.package}</Link>
         </div>
         <SidebarGroup title="Modules" package={props.package} version={props.version} items={[]} type="subdir"/>
         <SidebarGroup title="Classes" package={props.package} version={props.version} items={props.classes}

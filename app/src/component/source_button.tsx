@@ -1,4 +1,5 @@
 import {CodeIcon} from "@heroicons/react/solid"
+import {Link} from "react-router-dom"
 
 interface Props {
     pkg: string
@@ -8,8 +9,8 @@ interface Props {
 }
 
 export function SourceButton({pkg, version, file, line}: Props) {
-    return <a href={`/${pkg}/${version}/file/${file}#source.${line}`}
+    return <Link to={`/${pkg}/${version}/file/${file}#source.${line}`}
        className="text-gray-400 hover:text-gray-600" >
         <CodeIcon className="w-6 mt-1"/>
-    </a>
+    </Link>
 }
