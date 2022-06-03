@@ -25,8 +25,8 @@ services:
     env: static
     name: tsdoc.static
     routes:
-    buildCommand: BUILD=1 ./render.sh site release
-    staticPublishPath: site/build/
+    buildCommand: BUILD=1 ./render.sh app release
+    staticPublishPath: app/build/
     autoDeploy: false
     envVars:
       - fromGroup: .npmrc
