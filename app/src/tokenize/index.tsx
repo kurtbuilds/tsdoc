@@ -96,7 +96,7 @@ export function tokenize_type(type: Type, context: Context): ReactChild {
             const middle = intersperse(type.typeArguments.map(x => tokenize_type(x, context)), ", ")
             return <span>{type.name}&lt;{middle}&gt;</span>
         } else {
-            return <a className="hover:text-gray-400" href={`/${context.package}/${context.version}/interface/${type.name}`}>{type.name}</a>
+            return <a key={type.name} className="hover:text-gray-400" href={`/${context.package}/${context.version}/interface/${type.name}`}>{type.name}</a>
         }
     } else if (type.type === "reflection") {
         return <span>Unsupported</span>

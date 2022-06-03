@@ -7,7 +7,7 @@ const to_absolute = (p: string) => path.resolve(CWD, p)
 
 const template = fs.readFileSync(to_absolute("build/index.html"), "utf-8")
 // import {render} from "src/lib/ssr"
-const {render} = require(CWD + "/build/server/ssr.js")
+const {render} = require(CWD + "/build/server/assets/ssr.js")
 
 const DEFAULT_PATHS = [
     "/",

@@ -6,6 +6,7 @@ import react from "@vitejs/plugin-react"
 import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
+import fs from "fs"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -69,14 +70,18 @@ export default defineConfig({
     build: {
         outDir: "build",
         target: "es2020",
+        rollupOptions: {
+            output: {
+                entryFileNames: "assets/[name].js",
+                chunkFileNames: "assets/[name].js",
+                assetFileNames: "assets/[name].[ext]"
+            }
+        }
     },
     plugins: [
-        //@ts-ignore
         imagetools(),
         HtmlPlugin(),
-        //@ts-ignore
         react(),
-        //@ts-ignore
         redirectAllCustom(),
     ],
     resolve: {

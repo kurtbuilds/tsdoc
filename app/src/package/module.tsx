@@ -81,21 +81,16 @@ export function Package() {
 
     return <Container pkg={params.package!} version={params.version!} classes={classes}
                       constants={constants} interfaces={interfaces} functions={functions}>
-        <div className="flex-grow p-4">
-            <div className="flex justify-end">
-                <DarkModeToggle/>
-            </div>
-            <Introduction version={params.version!} package={params.package!} examples={examples}
-                          comment={comment}/>
-            <Section title="Classes" items={classes} type="class" package={params.package!}
-                     version={params.version!}/>
-            <Section title="Functions" items={functions} type="function" package={params.package!}
-                     version={params.version!}/>
-            <Section title="Interfaces" items={interfaces} type="constant" package={params.package!}
-                     version={params.version!}/>
-            <Section title="Constants" items={constants} type="constant" package={params.package!}
-                     version={params.version!}/>
-        </div>
+        <Introduction version={params.version!} package={params.package!} examples={examples}
+                      comment={comment}/>
+        <Section title="Classes" items={classes} type="class" package={params.package!}
+                 version={params.version!}/>
+        <Section title="Functions" items={functions} type="function" package={params.package!}
+                 version={params.version!}/>
+        <Section title="Interfaces" items={interfaces} type="constant" package={params.package!}
+                 version={params.version!}/>
+        <Section title="Constants" items={constants} type="constant" package={params.package!}
+                 version={params.version!}/>
     </Container>
 }
 

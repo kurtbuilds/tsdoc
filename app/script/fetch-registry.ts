@@ -113,8 +113,13 @@ function generate_target_file(name: string) {
     const exports = result.source_files.map(f => f.identifier).join(", ")
     const template = `\
 import typedoc from "../stage/typedoc.json"
-${imports}
-export {typedoc, ${exports}}
+const files = import.meta.globEager(
+    "/stage/${name}/src/**/*.ts",
+    //@ts-ignore
+    { as: "raw" }
+)
+export {typedoc}
+export default files
 `
     fs.writeFileSync("src/target.ts", template)
 }
@@ -151,7 +156,9 @@ async function main() {
         version = manifest.version
         name = manifest.name
 
-        await subcommand(`cd stage && rm -rf *`)
+        if (process.env.DELETE) {
+            await subcommand(`cd stage && rm -rf *`)
+        }
         await subcommand(`cd stage && git clone ${url} ${name}`)
         await subcommand(`cd stage/${name} && git checkout tags/v${version} -b v${version}`)
         await subcommand(`cd stage/${name} && pnpm install --config.auto-install-peers=true`)
@@ -161,8 +168,11 @@ async function main() {
 
     console.log(name)
     console.log(version)
-    //generate_target_file(name)
+    generate_target_file(name)
     generate_static_urls_file(name, version)
 }
 
-main().catch(e => console.error(e))
+main().catch(e => {
+    console.error(e)
+    process.exit(1)
+})
