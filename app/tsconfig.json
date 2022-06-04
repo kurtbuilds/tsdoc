@@ -6,7 +6,7 @@
     ],
     "target": "esnext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "es2021"],
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
