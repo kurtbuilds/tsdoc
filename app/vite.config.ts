@@ -6,6 +6,7 @@ import react from "@vitejs/plugin-react"
 import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
+import del from "rollup-plugin-delete"
 import fs from "fs"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
@@ -55,6 +56,10 @@ function redirectAllCustom() {
     }
 }
 
+const BASE_FOLDER = process.env.BUILD_PACKAGE_NAME
+    ? `${process.env.BUILD_PACKAGE_NAME}/${process.env.BUILD_PACKAGE_VERSION}/assets`
+    : "assets/"
+// const BASE_FOLDER = "assets"
 // https://vitejs.dev/config/
 export default defineConfig({
     server: {
@@ -72,10 +77,15 @@ export default defineConfig({
         target: "es2020",
         rollupOptions: {
             output: {
-                entryFileNames: "assets/[name].js",
-                chunkFileNames: "assets/[name].js",
-                assetFileNames: "assets/[name].[ext]"
-            }
+                entryFileNames: `${BASE_FOLDER}/[name].[hash].js`,
+                chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
+                assetFileNames: `${BASE_FOLDER}/[name].[hash].[ext]`
+            },
+            plugins: [
+                process.env.BUILD_PACKAGE_NAME
+                    ? del({targets: "library/*", hook: "generateBundle"})
+                    : undefined,
+            ]
         }
     },
     plugins: [

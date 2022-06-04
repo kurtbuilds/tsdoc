@@ -1,7 +1,6 @@
 import {Link, Navigate, useParams} from "react-router-dom"
 import {tokenize} from "src/tokenize"
 import typedoc from "../../stage/typedoc.json"
-import {DarkModeToggle} from "src/app/theme_context"
 import {ReactChild} from "react"
 import {extract_package} from "src/package/extract"
 import {CodeIcon} from "@heroicons/react/solid"

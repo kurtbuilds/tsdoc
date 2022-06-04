@@ -32,20 +32,25 @@ run:
     vite
 alias r := run
 
-fetch:
-    node -r esbuild-register script/fetch-registry.ts
-    vite build --outDir build/server --ssr src/lib/ssr.tsx
-    node -r esbuild-register script/generate-static.ts stage/static_urls.txt public
+stage:
+    node -r esbuild-register script/stage-package.ts
 
-alias f := fetch
+clean:
+    rm -rf build
+
+gen:
+    #!/bin/bash -e
+    function show() { dye -m -- "$@"; "$@"; }
+    # show vite build --outDir build/server --ssr src/lib/ssr.tsx
+    export BUILD_PACKAGE_NAME=$(ls stage | rg -v \\.)
+    export BUILD_PACKAGE_VERSION=$(cat stage/$BUILD_PACKAGE_NAME/package.json | jq -r .version)
+    show vite build --outDir library/
+    show mv library/index.html library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/
+    #node -r esbuild-register script/generate-static.ts stage/static_urls.txt public
+    #rm -rf build/server
 
 run-static:
     cd build/static && http
-
-build:
-    vite build --outDir build/client
-    vite build --outDir build/server --ssr src/lib/ssr.tsx
-alias b := build
 
 watch:
     vite build --watch --outDir build/client
