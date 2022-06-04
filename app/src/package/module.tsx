@@ -77,7 +77,7 @@ export function Package() {
     const examples = typedoc.comment.tags.filter(tag => tag.tag === "example")
         .map(tag => tokenize(tag.text))
 
-    const {classes, functions, constants, interfaces} = extract_package()
+    const {classes, functions, constants, interfaces} = extract_package(typedoc)
 
     return <Container pkg={params.package!} version={params.version!} classes={classes}
                       constants={constants} interfaces={interfaces} functions={functions} name={params.package!}>

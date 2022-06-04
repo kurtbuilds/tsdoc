@@ -2,7 +2,7 @@ import {PackageParams} from "src/package/module"
 import {useParams} from "react-router-dom"
 import {tokenize, tokenize_type} from "src/tokenize"
 import {typedoc} from "src/target"
-import {extract_package} from "src/package/extract"
+import {extract_package, normalize_filepath} from "src/package/extract"
 import {SourceButton} from "src/component/code"
 import {Container} from "src/package/container"
 import {Func} from "src/package/type"
@@ -15,7 +15,7 @@ interface ItemParams extends PackageParams {
 export function Function() {
     const params = useParams<ItemParams>()
 
-    const {classes, functions, constants, interfaces} = extract_package()
+    const {classes, functions, constants, interfaces} = extract_package(typedoc)
     const item: Func = typedoc.children.find(i => i.name === params.name)! as any
 
     const signature = item.signatures![0]
@@ -25,6 +25,7 @@ export function Function() {
         .map(tag => tokenize(tag.text)) ?? []
 
     const {fileName, line} = item.sources![0]
+    const source_path = normalize_filepath(fileName)
 
     let kind = item.kindString?.toLowerCase()
     if ((signature.type as any).name === "Promise") {
@@ -52,7 +53,7 @@ export function Function() {
                 <span className="inline">({fn_args})</span>
                 <span className="inline">: {return_type}</span>
             </div>
-            <SourceButton pkg={params.package!} version={params.version!} file={fileName} line={line}/>
+            <SourceButton pkg={params.package!} version={params.version!} file={source_path} line={line}/>
         </div>
         <div className="mt-3" children={comment}/>
         <div className="mt-6">

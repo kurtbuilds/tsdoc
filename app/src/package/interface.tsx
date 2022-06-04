@@ -14,7 +14,7 @@ interface ItemParams extends PackageParams {
 export function Interface() {
     const params = useParams<ItemParams>()
 
-    const {classes, functions, constants, interfaces} = extract_package()
+    const {classes, functions, constants, interfaces} = extract_package(typedoc)
     const item: InterfaceDeclaration = typedoc.children.find(i => i.name === params.name)! as any
 
     const {fileName, line} = item.sources![0]

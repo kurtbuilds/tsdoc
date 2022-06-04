@@ -5,8 +5,7 @@ const CWD = process.cwd()
 const OUTPUT_DIR = path.join(CWD, "build")
 const to_absolute = (p: string) => path.resolve(CWD, p)
 
-const template = fs.readFileSync(to_absolute("index.html"), "utf-8")
-// import {render} from "src/lib/ssr"
+const template = fs.readFileSync(to_absolute("build/index.html"), "utf-8")
 const {render} = require(CWD + "/build/server/assets/ssr.js")
 
 const DEFAULT_PATHS = [
@@ -28,7 +27,10 @@ async function main() {
         const context = {}
         const appHtml = await render(url, context)
 
-        const html = template.replace("<!--ssr-outlet-->", appHtml)
+        const html = template.replace(
+            new RegExp("<div id=\"root\">(.*)</div>"),
+            `<div id="root">${appHtml}</div>`
+        )
 
         fs.mkdirSync(path.join(output_dir, url), {recursive: true})
         const fpath = path.join(output_dir, url, "index.html")

@@ -1,4 +1,4 @@
-import {typedoc} from "src/target"
+// import {typedoc} from "src/target"
 import {Class, Constant, Func, Interface, Item, Property} from "src/package/type"
 
 
@@ -9,18 +9,18 @@ interface ExtractResult {
     functions: Func[]
 }
 
-export function extract_package(): ExtractResult {
+export function extract_package(typedoc: any): ExtractResult {
     //@ts-ignore
-    const classes: CodeObject[] = typedoc.groups.find(group => group.kind === 128)?.children
+    const classes: Class[] = typedoc.groups.find(group => group.kind === 128)?.children
         .map(child_idx => typedoc.children.find(child => child.id === child_idx)!) ?? []
     //@ts-ignore
-    const functions: CodeObject[] = typedoc.groups.find(group => group.kind === 64)?.children
+    const functions: Func[] = typedoc.groups.find(group => group.kind === 64)?.children
         .map(child_idx => typedoc.children.find(child => child.id === child_idx)!) ?? []
     //@ts-ignore
-    const interfaces: CodeObject[] = typedoc.groups.find(group => [256, 4194304].includes(group.kind))?.children
+    const interfaces: Interface[] = typedoc.groups.find(group => [256, 4194304].includes(group.kind))?.children
         .map(child_idx => typedoc.children.find(child => child.id === child_idx)!) ?? []
     //@ts-ignore
-    const constants: CodeObject[] = typedoc.groups.find(group => [32].includes(group.kind))?.children
+    const constants: Constant[] = typedoc.groups.find(group => [32].includes(group.kind))?.children
         .map(child_idx => typedoc.children.find(child => child.id === child_idx)!) ?? []
 
     return {classes, functions, interfaces, constants}

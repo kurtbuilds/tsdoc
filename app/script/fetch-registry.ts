@@ -2,6 +2,7 @@ import * as fs from "fs"
 import * as path from "path"
 import {getPackageManifest, getRegistryMetadata, searchPackages} from "query-registry"
 import {exec} from "child_process"
+import {extract_package} from "../src/package/extract"
 
 
 async function subcommand(command: string) {
@@ -130,10 +131,26 @@ function generate_static_urls_file(name: string, version: string) {
         name,
         path.join(name, version)
     ]
+    // add files
     for (const [cur, dirs, files] of walk(`stage/${name}/src`)) {
         for (const file of files) {
             paths.push(path.join("/", name, version, "file", "src", path.relative(`stage/${name}/src`, file)))
         }
+    }
+    // add classes n stuff
+    const typedoc = JSON.parse(fs.readFileSync("stage/typedoc.json", "utf-8"))
+    const {classes, interfaces, constants, functions} = extract_package(typedoc)
+    for (const cls of classes) {
+        paths.push(path.join("/", name, version, "class", cls.name))
+    }
+    for (const cls of interfaces) {
+        paths.push(path.join("/", name, version, "interface", cls.name))
+    }
+    for (const cls of constants) {
+        paths.push(path.join("/", name, version, "constant", cls.name))
+    }
+    for (const cls of functions) {
+        paths.push(path.join("/", name, version, "function", cls.name))
     }
     fs.writeFileSync("stage/static_urls.txt", paths.join("\n"))
 }
