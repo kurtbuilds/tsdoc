@@ -14,5 +14,6 @@ export function Routes() {
         <Route path="/:package/:version/interface/:name" element={<Interface/>}/>
         <Route path="/:package/:version/constant/:name" element={<Package/>}/>
         <Route path="/:package/:version/file/*" element={<SourceFile/>}/>
+        <Route path="*" element={<div>Library not found...</div>}/>
     </Switch>
 }

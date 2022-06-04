@@ -1,6 +1,6 @@
 import {defineConfig} from "vitest/config"
 import {imagetools} from "vite-imagetools"
-import {resolve, join} from "path"
+import {resolve, join, extname} from "path"
 import {homedir} from "os"
 import react from "@vitejs/plugin-react"
 //@ts-ignore
@@ -35,10 +35,12 @@ function redirectAllCustom() {
     return {
         name: "redirect-custom",
         configureServer(server: any) {
-            server.middlewares.use("/query-registry/2.5.0", (req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
+            server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
                 const url = (req as any).originalUrl
-                if (!url.startsWith("/query-registry/2.5.0/assets")) {
-                    const html = readFileSync(join("public", "query-registry/2.5.0/", "index.html"), "utf-8")
+                console.log(url)
+                if (url === "/query-registry/2.5.0") {
+                    const html = readFileSync(join("src", "libdoc", "index.html"), "utf-8")
+                    res.setHeader("Content-Type", "text/html")
                     res.write(html)
                     res.end()
                 } else {
@@ -72,9 +74,6 @@ export default defineConfig({
         outDir: "build",
         target: "es2020",
         rollupOptions: {
-            input: {
-                libdoc: resolve("src", "libdoc", "index.html"),
-            },
             output: {
                 entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
@@ -91,7 +90,7 @@ export default defineConfig({
         imagetools(),
         HtmlPlugin(),
         react(),
-        // redirectAllCustom(),
+        redirectAllCustom(),
     ],
     resolve: {
         alias: {
