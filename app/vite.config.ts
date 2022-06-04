@@ -31,13 +31,16 @@ const HtmlPlugin = () => {
 }
 
 
+const LIBDOC_REGEX = new RegExp("/[^a-zA-Z_-]+/[^/]+")
+const LIBDOC_PATH_REGEX = new RegExp("/[^/]+/[^/]+/(file|function|interface|class)/")
+
 function redirectAllCustom() {
     return {
         name: "redirect-custom",
         configureServer(server: any) {
             server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
                 const url = (req as any).originalUrl
-                if (url === "/query-registry/2.5.0") {
+                if (LIBDOC_REGEX.test(url) || LIBDOC_PATH_REGEX.test(url)) {
                     console.log(url)
                     const handler = history({
                         disableDotRule: true,

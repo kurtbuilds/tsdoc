@@ -118,3 +118,8 @@ main {
     margin-bottom: 0.5em;
     border-radius: 1em;
 }
+
+
+pre[class*="language-"] {
+    overflow: auto;
+}

@@ -65,14 +65,14 @@ watch:
     vite build --watch --outDir build/client
 
 release:
-    rm -rf stage
+    #rm -rf stage
     NODE_ENV= pnpm install
     vite build --outDir build
-    vite build --outDir build/server --ssr src/lib/ssr.tsx
-    node -r esbuild-register script/generate-static.ts
+    #vite build --outDir build/server --ssr src/lib/ssr.tsx
+    #node -r esbuild-register script/generate-static.ts
     rm -rf build/server
-    cp -r library/* build/
-    fd . build/
+    #cp -r library/* build/
+    #fd . build/
 
 ios:
     open ./ios/*.xcodeproj/project.xcworkspace
