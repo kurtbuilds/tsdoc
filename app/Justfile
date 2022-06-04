@@ -46,8 +46,8 @@ gen:
     export BUILD_PACKAGE_VERSION=$(cat stage/$BUILD_PACKAGE_NAME/package.json | jq -r .version)
     show vite build --outDir library/
     show mv library/index.html library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/
-    #node -r esbuild-register script/generate-static.ts stage/static_urls.txt public
-    #rm -rf build/server
+    #show node -r esbuild-register script/generate-static.ts stage/static_urls.txt
+    show rm -rf build/server
 
 run-static:
     cd build/static && http
@@ -61,6 +61,7 @@ release:
     vite build --outDir build/server --ssr src/lib/ssr.tsx
     node -r esbuild-register script/generate-static.ts
     rm -rf build/server
+    cp -r library/* build/
     fd . build/
 
 ios:

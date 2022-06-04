@@ -1,5 +1,5 @@
-@import "/public/prism-dark.css";
-@import "/public/prism-light.css";
+@import "/prism-dark.css";
+@import "/prism-light.css";
 
 @tailwind base;
 @tailwind components;
