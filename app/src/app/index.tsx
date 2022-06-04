@@ -1,11 +1,6 @@
-import React from "react"
-import {Routes} from "./route"
-import {set_user, USER_FIELDS } from "./user_state"
-import {Loading} from "src/component/loading"
-import { DEFAULT_NEXT_PAGE } from "src/auth/login"
-import { gql_fetch } from "src/gql/client"
-import { safe_exec } from "src/lib/util"
-import { useEffect } from "react"
+import React, {useEffect} from "react"
+import {Routes} from "../tsdoc/route"
+import {USER_FIELDS} from "./user_state"
 import {useLocation, useNavigate} from "react-router-dom"
 import {usePageState} from "@kurtbuilds/pagestate"
 import {set_document_theme, ThemeState} from "src/app/theme_context"
@@ -43,6 +38,6 @@ export function App() {
     // if (page.loading && location.pathname !== "/") {
     //     return <Loading/>
     // } else {
-        return <Routes/>
+    return <Routes/>
     // }
 }

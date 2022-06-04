@@ -58,9 +58,10 @@ function redirectAllCustom() {
 
 const BASE_FOLDER = process.env.BUILD_PACKAGE_NAME
     ? `${process.env.BUILD_PACKAGE_NAME}/${process.env.BUILD_PACKAGE_VERSION}/assets`
-    : "assets/"
+    : "assets"
 // const BASE_FOLDER = "assets"
 // https://vitejs.dev/config/
+const SSR_BUILD = process.argv.includes("--ssr")
 export default defineConfig({
     server: {
         https,
@@ -77,7 +78,7 @@ export default defineConfig({
         target: "es2020",
         rollupOptions: {
             output: {
-                entryFileNames: `${BASE_FOLDER}/[name].[hash].js`,
+                entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
                 assetFileNames: `${BASE_FOLDER}/[name].[hash].[ext]`
             },

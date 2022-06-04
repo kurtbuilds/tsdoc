@@ -36,17 +36,19 @@ stage:
     node -r esbuild-register script/stage-package.ts
 
 clean:
-    rm -rf build
+    rm -rf build/
+    rm -rf stage/
+    mkdir stage/
 
 gen:
     #!/bin/bash -e
     function show() { dye -m -- "$@"; "$@"; }
-    # show vite build --outDir build/server --ssr src/lib/ssr.tsx
+    show vite build --outDir build/server --ssr src/lib/ssr.tsx
     export BUILD_PACKAGE_NAME=$(ls stage | rg -v \\.)
     export BUILD_PACKAGE_VERSION=$(cat stage/$BUILD_PACKAGE_NAME/package.json | jq -r .version)
     show vite build --outDir library/
     show mv library/index.html library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/
-    #show node -r esbuild-register script/generate-static.ts stage/static_urls.txt
+    #show node -r esbuild-register script/generate-lib-docs.ts stage/static_urls.txt
     show rm -rf build/server
 
 run-static:
@@ -56,6 +58,7 @@ watch:
     vite build --watch --outDir build/client
 
 release:
+    rm -rf stage
     NODE_ENV= pnpm install
     vite build --outDir build
     vite build --outDir build/server --ssr src/lib/ssr.tsx
@@ -76,5 +79,5 @@ run-release:
     vite preview
 
 deploy:
-    #render put-env $SERVICE_NAME .env.production
+    render put-env $SERVICE_NAME .env.production
     render deploy $SERVICE_NAME

@@ -112,7 +112,7 @@ function generate_target_file(name: string) {
     // }).join("\n")
     // const exports = result.source_files.map(f => f.identifier).join(", ")
     const template = `\
-import typedoc from "../stage/typedoc.json"
+import typedoc from "../../stage/typedoc.json"
 const files = import.meta.globEager(
     "/stage/${name}/src/**/*.ts",
     //@ts-ignore
@@ -121,7 +121,7 @@ const files = import.meta.globEager(
 export {typedoc}
 export default files
 `
-    fs.writeFileSync("src/target.ts", template)
+    fs.writeFileSync("src/libdoc/target.ts", template)
 }
 
 

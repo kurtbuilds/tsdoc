@@ -1,7 +1,7 @@
-import {Link, Navigate, useParams} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 import {tokenize} from "src/tokenize"
 import typedoc from "../../stage/typedoc.json"
-import {ReactChild} from "react"
+import {ReactChild, useEffect} from "react"
 import {extract_package} from "src/package/extract"
 import {CodeIcon} from "@heroicons/react/solid"
 import {Item} from "src/package/type"
@@ -56,7 +56,7 @@ export function Section(props: SectionProps) {
                     const description = tokenize(c.comment?.shortText ?? "")
                     return [
                         <Link className="link" key={c.name}
-                           to={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
+                              to={`/${props.package}/${props.version}/${props.type}/${c.name}`}>
                             {c.name}
                         </Link>,
                         <div className="col-span-3" key={i}>{description}</div>
@@ -93,7 +93,11 @@ export function Package() {
     </Container>
 }
 
+
 export function RedirectToLatest() {
     const params = useParams<BasePackageParams>()
-    return <Navigate to={`/${params.package}/2.5.0`}/>
+    useEffect(() => {
+        window.location.href = `/${params.package}/2.5.0`
+    })
+    return <div></div>
 }

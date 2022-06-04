@@ -1,4 +1,4 @@
-import typedoc from "../stage/typedoc.json"
+import typedoc from "../../stage/typedoc.json"
 const files = import.meta.globEager(
     "/stage/query-registry/src/**/*.ts",
     //@ts-ignore

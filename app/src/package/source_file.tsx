@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom"
-import target from "src/target"
+import target from "src/libdoc/target"
 import {PackageParams} from "src/package/module"
 import {Page} from "src/app/page"
 import {Code} from "src/component/code"

@@ -21,7 +21,7 @@ function to_absolute(p: string) {
 
 const BASE_TEMPLATE = fs.readFileSync(to_absolute(path.join("library", NAME, VERSION, "index.html")), "utf-8")
 
-const {render} = require(CWD + "/build/server/assets/ssr.js")
+const {render} = require(CWD + "/build/server/ssr.js")
 
 async function main() {
     const paths = fs.readFileSync(PATHS_FILE, "utf-8").split("\n")
