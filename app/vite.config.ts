@@ -73,8 +73,8 @@ export default defineConfig({
         target: "es2020",
         rollupOptions: {
             input: {
-                libdoc: resolve()
-            }
+                libdoc: resolve("src", "libdoc", "index.html"),
+            },
             output: {
                 entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
