@@ -29,7 +29,7 @@ test FILTER="":
 alias t := test
 
 run:
-    VITE_ENTRY_SCRIPT=src/tsdoc/index.tsx vite
+    vite
 alias r := run
 
 clean:

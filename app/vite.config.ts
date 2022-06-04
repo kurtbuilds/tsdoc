@@ -37,13 +37,22 @@ function redirectAllCustom() {
         configureServer(server: any) {
             server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
                 const url = (req as any).originalUrl
-                console.log(url)
                 if (url === "/query-registry/2.5.0") {
-                    const html = readFileSync(join("src", "libdoc", "index.html"), "utf-8")
-                    res.setHeader("Content-Type", "text/html")
-                    res.write(html)
-                    res.end()
+                    console.log(url)
+                    const handler = history({
+                        disableDotRule: true,
+                        rewrites: [
+                            {
+                                from: /.*/, to: function (context) {
+                                    console.log("context", context.match)
+                                    return "/src/libdoc/index.html"
+                                }
+                            }
+                        ],
+                    })
+                    handler(req as Request, res as Response, next)
                 } else {
+
                     next()
                 }
             })
@@ -74,6 +83,9 @@ export default defineConfig({
         outDir: "build",
         target: "es2020",
         rollupOptions: {
+            input: {
+                libdoc: resolve("src", "libdoc", "index.html"),
+            },
             output: {
                 entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
