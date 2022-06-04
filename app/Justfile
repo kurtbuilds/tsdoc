@@ -29,27 +29,34 @@ test FILTER="":
 alias t := test
 
 run:
-    vite
+    VITE_ENTRY_SCRIPT=src/tsdoc/index.tsx vite
 alias r := run
-
-stage:
-    node -r esbuild-register script/stage-package.ts
 
 clean:
     rm -rf build/
     rm -rf stage/
     mkdir stage/
 
-gen:
+stage:
+    node -r esbuild-register script/stage-package.ts
+
+lib:
     #!/bin/bash -e
     function show() { dye -m -- "$@"; "$@"; }
     show vite build --outDir build/server --ssr src/lib/ssr.tsx
     export BUILD_PACKAGE_NAME=$(ls stage | rg -v \\.)
     export BUILD_PACKAGE_VERSION=$(cat stage/$BUILD_PACKAGE_NAME/package.json | jq -r .version)
-    show vite build --outDir library/
+    VITE_ENTRY_SCRIPT=src/libdoc/index.tsx show vite build --outDir library/
     show mv library/index.html library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/
     #show node -r esbuild-register script/generate-lib-docs.ts stage/static_urls.txt
     show rm -rf build/server
+    cp -r library/query-registry public/
+
+link:
+    fd . library/ -d 1 -x cp -r {} public/{/}
+
+unlink:
+    fd . library/ -d 1 -x rm -r public/{/}
 
 run-static:
     cd build/static && http

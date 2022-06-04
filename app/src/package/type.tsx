@@ -126,3 +126,7 @@ export interface Property extends BaseDeclaration {
 
 export type Type = IntrinsicType | TypeReference | ReflectionDeclaration
 export type Item = Class | Interface | Constant | Func
+
+export interface BasePackageParams extends Record<string, string | undefined> {
+    package: string | undefined
+}

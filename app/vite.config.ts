@@ -1,13 +1,14 @@
 import {defineConfig} from "vitest/config"
 import {imagetools} from "vite-imagetools"
-import {resolve} from "path"
+import {resolve, join} from "path"
 import {homedir} from "os"
 import react from "@vitejs/plugin-react"
+//@ts-ignore
 import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
 import del from "rollup-plugin-delete"
-import fs from "fs"
+import {readFileSync} from "fs"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -32,30 +33,23 @@ const HtmlPlugin = () => {
 
 function redirectAllCustom() {
     return {
-        name: "log-url",
+        name: "redirect-custom",
         configureServer(server: any) {
-            return () => {
-                server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
-                    // if (req.url?.endsWith(".ts")) {
-                    //     const path = join(__dirname, "public", req.url!, "./index.html")
-                    //     console.log(path)
-                    //     const body = readFileSync(path).toString()
-                    //     res.setHeader("Content-Type", "text/html")
-                    //     res.write(body)
-                    //     res.end()
-                    // } else {
-                    const handler = history({
-                        disableDotRule: true,
-                        rewrites: [{from: /\/$/, to: () => "/index.html"}]
-                    })
-                    handler(req as Request, res as Response, next)
-                    // }
-                })
-            }
+            server.middlewares.use("/query-registry/2.5.0", (req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
+                const url = (req as any).originalUrl
+                if (!url.startsWith("/query-registry/2.5.0/assets")) {
+                    const html = readFileSync(join("public", "query-registry/2.5.0/", "index.html"), "utf-8")
+                    res.write(html)
+                    res.end()
+                } else {
+                    next()
+                }
+            })
         }
     }
 }
 
+// console.log(process.env)
 const BASE_FOLDER = process.env.BUILD_PACKAGE_NAME
     ? `${process.env.BUILD_PACKAGE_NAME}/${process.env.BUILD_PACKAGE_VERSION}/assets`
     : "assets"
@@ -65,6 +59,7 @@ const SSR_BUILD = process.argv.includes("--ssr")
 export default defineConfig({
     server: {
         https,
+        open: true,
         port: parseInt(process.env.PORT!),
         // host: "0.0.0.0",
         // origin: "*",
@@ -77,6 +72,9 @@ export default defineConfig({
         outDir: "build",
         target: "es2020",
         rollupOptions: {
+            input: {
+                libdoc: resolve()
+            }
             output: {
                 entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
@@ -86,14 +84,14 @@ export default defineConfig({
                 process.env.BUILD_PACKAGE_NAME
                     ? del({targets: "library/*", hook: "generateBundle"})
                     : undefined,
-            ]
-        }
+            ],
+        },
     },
     plugins: [
         imagetools(),
         HtmlPlugin(),
         react(),
-        redirectAllCustom(),
+        // redirectAllCustom(),
     ],
     resolve: {
         alias: {

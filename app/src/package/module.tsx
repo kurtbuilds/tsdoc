@@ -1,15 +1,11 @@
 import {Link, useParams} from "react-router-dom"
 import {tokenize} from "src/tokenize"
 import typedoc from "../../stage/typedoc.json"
-import {ReactChild, useEffect} from "react"
+import {ReactChild} from "react"
 import {extract_package} from "src/package/extract"
 import {CodeIcon} from "@heroicons/react/solid"
-import {Item} from "src/package/type"
+import {BasePackageParams, Item} from "src/package/type"
 import {Container} from "src/package/container"
-
-interface BasePackageParams extends Record<string, string | undefined> {
-    package: string | undefined
-}
 
 export interface PackageParams extends BasePackageParams {
     version: string
@@ -91,13 +87,4 @@ export function Package() {
         <Section title="Constants" items={constants} type="constant" package={params.package!}
                  version={params.version!}/>
     </Container>
-}
-
-
-export function RedirectToLatest() {
-    const params = useParams<BasePackageParams>()
-    useEffect(() => {
-        window.location.href = `/${params.package}/2.5.0`
-    })
-    return <div></div>
 }

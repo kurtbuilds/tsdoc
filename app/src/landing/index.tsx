@@ -1,9 +1,7 @@
 import {Logo} from "src/app/logo"
-import {Hero} from "src/landing/hero"
 import {FooterBasic} from "src/component"
 import {Link} from "react-router-dom"
 import {DarkModeToggle} from "src/app/theme_context"
-
 
 
 export function MenuPopover() {
@@ -67,7 +65,8 @@ export function Landing() {
             <div className="grid grid-cols-2 mt-6 max-w-xl mx-auto">
                 <div className="">
                     <h3 className="font-bold text-xl">Recent Packages</h3>
-                    <Link className="text-blue-500 hover:text-blue-700" to="/query-registry/2.5.0">query-registry</Link>
+                    <a className="text-blue-500 hover:text-blue-700 block" href="/query-registry/foobar">foobar</a>
+                    <a className="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a>
                 </div>
                 <div>
                     <h3 className="font-bold text-xl">Recent Packages</h3>
