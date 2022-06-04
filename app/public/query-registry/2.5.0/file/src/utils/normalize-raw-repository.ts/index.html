@@ -19,14 +19,82 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!--    <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="undefined"-->
+<!--    <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="%VITE_FATHOM_SITE%"-->
 <!--            defer></script>-->
+    <script src="/prism.js" defer data-manual="true"></script>
     <title>Tsdoc</title>
-  <script type="module" crossorigin src="/assets/index.js"></script>
-  <link rel="stylesheet" href="/assets/index.css">
 </head>
 <body>
-<div id="root"><div class="flex flex-col min-h-full w-full min-h-full"><div class="mx-auto max-w-4xl w-full"><div class="flex justify-end"><button class="dark-mode-toggle">Dark Mode</button></div><h1 class="text-center font-bold mt-24 text-7xl">Typescript Docs</h1><div class="max-w-xl w-full mx-auto"><input class="border w-full border-black rounded-lg p-1 border-2 mt-6" placeholder="Search..."/></div><div class="text-center text-xl mt-6 grid grid-cols-2"><div class="flex justify-end"><strong>1,000</strong></div><div class="flex justify-start ml-1">libraries</div><div class="flex justify-end"><strong>10,000</strong></div><div class="flex justify-start ml-1">visitors last month</div></div><div class="grid grid-cols-2 mt-6 max-w-xl mx-auto"><div class=""><h3 class="font-bold text-xl">Recent Packages</h3><a class="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a></div><div><h3 class="font-bold text-xl">Recent Packages</h3><a class="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a></div></div><div></div></div></div></div>
+<div id="root"><div class="flex flex-col w-full"><div class="bg-gray-400 dark:bg-gray-600 p-2"><a class="" href="/">Site-wide navigation</a></div><pre class="line-numbers linkable-line-numbers language-typescript" id="source"><code class="language-typescript">import gitUrlParse from &#x27;git-url-parse&#x27;;
+import { GitRepository } from &#x27;../types/git-repository&#x27;;
+import { Repository } from &#x27;../types/repository&#x27;;
 
+export function normalizeRawRepository({
+    rawRepository,
+}: {
+    rawRepository?: any;
+}): GitRepository | undefined {
+    if (isRepository(rawRepository)) {
+        return normalizeRepository({ rawRepository });
+    }
+
+    if (typeof rawRepository === &#x27;string&#x27;) {
+        return normalizeRepository({
+            rawRepository: { url: rawRepository },
+        });
+    }
+
+    return undefined;
+}
+
+function isRepository(rawRepository: any): rawRepository is Repository {
+    return (
+        rawRepository &amp;&amp;
+        typeof rawRepository === &#x27;object&#x27; &amp;&amp;
+        typeof rawRepository[&#x27;url&#x27;] === &#x27;string&#x27; &amp;&amp;
+        [&#x27;string&#x27;, &#x27;undefined&#x27;].includes(typeof rawRepository[&#x27;type&#x27;]) &amp;&amp;
+        [&#x27;string&#x27;, &#x27;undefined&#x27;].includes(typeof rawRepository[&#x27;directory&#x27;])
+    );
+}
+
+function normalizeRepository({
+    rawRepository,
+}: {
+    rawRepository: Repository;
+}): GitRepository | undefined {
+    const { url, directory: repositoryDir } = rawRepository;
+
+    const info = parseGitURL({ url });
+    if (!info) {
+        return undefined;
+    }
+
+    const { resource, full_name: repositoryID, filepath } = info;
+
+    // Add domain to sources derived from npm-style shortcuts
+    const host = resource
+        .replace(/^$/, &#x27;github.com&#x27;)
+        .replace(/^github$/, &#x27;github.com&#x27;)
+        .replace(/^gitlab$/, &#x27;gitlab.com&#x27;)
+        .replace(/^bitbucket$/, &#x27;bitbucket.org&#x27;);
+
+    const parsedDir = filepath !== &#x27;&#x27; ? filepath : undefined;
+
+    return {
+        type: &#x27;git&#x27;,
+        url: `https://${host}/${repositoryID}`,
+        directory: repositoryDir ?? parsedDir,
+    };
+}
+
+function parseGitURL({ url }: { url: string }): gitUrlParse.GitUrl | undefined {
+    let info;
+    try {
+        info = gitUrlParse(url);
+    } catch {}
+    return info;
+}
+</code></pre></div></div>
+<script type="module" src="/src/index.tsx"></script>
 </body>
 </html>

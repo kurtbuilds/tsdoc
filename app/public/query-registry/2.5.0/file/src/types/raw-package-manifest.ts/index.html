@@ -19,14 +19,75 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!--    <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="undefined"-->
+<!--    <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="%VITE_FATHOM_SITE%"-->
 <!--            defer></script>-->
+    <script src="/prism.js" defer data-manual="true"></script>
     <title>Tsdoc</title>
-  <script type="module" crossorigin src="/assets/index.js"></script>
-  <link rel="stylesheet" href="/assets/index.css">
 </head>
 <body>
-<div id="root"><div class="flex flex-col min-h-full w-full min-h-full"><div class="mx-auto max-w-4xl w-full"><div class="flex justify-end"><button class="dark-mode-toggle">Dark Mode</button></div><h1 class="text-center font-bold mt-24 text-7xl">Typescript Docs</h1><div class="max-w-xl w-full mx-auto"><input class="border w-full border-black rounded-lg p-1 border-2 mt-6" placeholder="Search..."/></div><div class="text-center text-xl mt-6 grid grid-cols-2"><div class="flex justify-end"><strong>1,000</strong></div><div class="flex justify-start ml-1">libraries</div><div class="flex justify-end"><strong>10,000</strong></div><div class="flex justify-start ml-1">visitors last month</div></div><div class="grid grid-cols-2 mt-6 max-w-xl mx-auto"><div class=""><h3 class="font-bold text-xl">Recent Packages</h3><a class="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a></div><div><h3 class="font-bold text-xl">Recent Packages</h3><a class="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a></div></div><div></div></div></div></div>
+<div id="root"><div class="flex flex-col w-full"><div class="bg-gray-400 dark:bg-gray-600 p-2"><a class="" href="/">Site-wide navigation</a></div><pre class="line-numbers linkable-line-numbers language-typescript" id="source"><code class="language-typescript">import { DistInfo } from &#x27;./dist-info&#x27;;
+import { NpmOperationalInternal } from &#x27;./npm-operational-internal&#x27;;
+import { PackageJSON } from &#x27;./package-json&#x27;;
+import { Person } from &#x27;./person&#x27;;
 
+/**
+ * `RawPackageManifest` represents the manifest, as returned by the registry,
+ * describing a specific version of a package.
+ *
+ * @remarks
+ * For some packages, especially legacy ones,
+ * the properties may be mistyped due to incorrect data present on the registry.
+ *
+ * @see {@link https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#getpackageversion}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#abbreviated-version-object}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#full-metadata-format}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#version}
+ * @see {@link PackageJSON}
+ */
+export interface RawPackageManifest extends PackageJSON {
+    /** Package version ID (for example, `foo@1.0.0` or `@bar/baz@1.0.0`) */
+    readonly _id: string;
+
+    /** Package name */
+    readonly name: string;
+
+    /** Package version number */
+    readonly version: string;
+
+    /**
+     * Distribution data from the registry
+     *
+     * @see {@link DistInfo}
+     */
+    readonly dist: DistInfo;
+
+    /** Commit hash corresponding to the published version */
+    readonly gitHead?: string;
+
+    /**
+     * User who published this package version
+     *
+     * @see {@link Person}
+     */
+    readonly _npmUser: Person;
+
+    /** Node version used when publishing */
+    readonly _nodeVersion?: string;
+
+    /** npm version used when publishing */
+    readonly _npmVersion?: string;
+
+    /**
+     * Internal npm data
+     *
+     * @see {@link NpmOperationalInternal}
+     */
+    readonly _npmOperationalInternal?: NpmOperationalInternal;
+
+    /** True if the package has a shrinkwrap file */
+    readonly _hasShrinkwrap?: boolean;
+}
+</code></pre></div></div>
+<script type="module" src="/src/index.tsx"></script>
 </body>
 </html>

@@ -54,7 +54,6 @@ release:
     NODE_ENV= pnpm install
     vite build --outDir build
     vite build --outDir build/server --ssr src/lib/ssr.tsx
-    # Create a mapping for node. Silly but I guess it works.
     node -r esbuild-register script/generate-static.ts
     rm -rf build/server
     fd . build/
