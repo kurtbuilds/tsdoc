@@ -5,7 +5,7 @@ const CWD = process.cwd()
 const OUTPUT_DIR = path.join(CWD, "build")
 const to_absolute = (p: string) => path.resolve(CWD, p)
 
-const template = fs.readFileSync(to_absolute("build/index.html"), "utf-8")
+const template = fs.readFileSync(to_absolute("index.html"), "utf-8")
 // import {render} from "src/lib/ssr"
 const {render} = require(CWD + "/build/server/assets/ssr.js")
 
