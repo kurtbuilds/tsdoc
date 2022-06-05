@@ -14,4 +14,11 @@ resource "namecheap_domain_records" "tsdoc" {
     address = "https://www.tsdoc.io"
     ttl = 300
   }
+
+  record {
+    hostname = "supporting-thirtyeight"
+    type = "CNAME"
+    address = "good-blue.b-cdn.net"
+    ttl = 300
+  }
 }

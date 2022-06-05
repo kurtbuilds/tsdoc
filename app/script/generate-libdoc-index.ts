@@ -2,11 +2,12 @@
 
 import * as fs from "fs"
 import * as path from "path"
+import {safe_readdirSync} from "../src/lib/script_util"
 
 async function main() {
     const result: any = { libraries: []}
     const avoid_repeat = []
-    for (const name of fs.readdirSync("stage")) {
+    for (const name of safe_readdirSync("stage")) {
         if (name.includes(".")) {
             continue
         }

@@ -9,8 +9,9 @@ import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
 import del from "rollup-plugin-delete"
-import {readdirSync, readFileSync} from "fs"
+import {readFileSync} from "fs"
 import {do_rewrite, LIBDOC_REGEX} from "./src/lib/config"
+import {safe_readdirSync} from "./src/lib/script_util"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -47,14 +48,6 @@ const ReplaceHtmlEnvVar = () => {
             })
         },
     } as Plugin
-}
-
-function safe_readdirSync(p: string): string[] {
-    try {
-        return readdirSync(p)
-    } catch (e) {
-        return []
-    }
 }
 
 const AVAILABLE_LIBS = Object.fromEntries(safe_readdirSync("stage")
