@@ -42,13 +42,12 @@ export function Search() {
     let results
     if (!result_data.length) {
         results = <div>
-            <div className="text-center mt-6 text-gray-500">
-                No results found.
+            <div className="text-center mt-6 text-gray-700 dark:text-gray-300">
+                No results found. 😔 Think we should have?
             </div>
-            <div className="mt-6 text-semibold text-xl">Should there be results?</div>
             <div className="mt-6">
-                <p>We haven't generated docs for every Typescript library yet!</p>
-                <p>Help us out by adding this library.</p>
+                <p>We haven't generated docs for every Typescript library yet!
+                   Help us out by adding it.</p>
             </div>
             <div className="mt-6 flex items-center">
                 <div className="font-bold mr-1">Package Name (or NPM URL)</div>

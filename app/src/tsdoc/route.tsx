@@ -6,7 +6,8 @@ import {UserState} from "../app/user_state"
 import {useEffect} from "react"
 import {BasePackageParams} from "src/package/type"
 import {Search} from "src/tsdoc/search"
-import {BuildJobs} from "src/tsdoc/build"
+import {BuildQueue} from "src/tsdoc/build"
+import {CreateJob, JobBoard} from "src/tsdoc/job"
 
 export function Private({children}: { children: JSX.Element }) {
     const user = UserState.use()
@@ -43,7 +44,9 @@ export function Routes() {
         <Route path="/signup" element={user ? <Navigate to={DEFAULT_LOGGED_IN_PATH}/> : <Signup/>}/>
 
         <Route path="/search" element={<Search/>}/>
-        <Route path="/builds" element={<BuildJobs/>}/>
+        <Route path="/builds" element={<BuildQueue/>}/>
+        <Route path="/jobs" element={<JobBoard/>}/>
+        <Route path="/jobs/create" element={<CreateJob/>}/>
         {/*<Route path="/:package" element={<RedirectToLatest/>}/>*/}
         <Route path="*" element={<div>Not Found</div>}/>
     </Switch>

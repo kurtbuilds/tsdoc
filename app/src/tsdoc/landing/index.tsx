@@ -87,7 +87,7 @@ export function Landing() {
     }
     return <LandingContainer>
         <h1 className="text-center font-bold mt-24 text-7xl">Typescript Docs</h1>
-        <SearchBar onSubmit={handleSubmit}/>
+        <SearchBar onSubmit={handleSubmit} className="max-w-xl w-full mx-auto mt-6" placeholder="Search packages..."/>
         <div className="text-center text-xl mt-6 grid grid-cols-2">
             <div className="flex justify-end">
                 <strong>1,000</strong>
@@ -114,8 +114,9 @@ export function Landing() {
                 })}
             </div>
         </div>
-        <div>
-
+        <div className="mt-6 mx-auto max-w-xl space-y-6 border-t pt-5">
+            <p>Want new challenges? See our list of <Link to="/jobs" className="link">well-documented Typescript roles!</Link></p>
+            <p>Need Typescript engineers? <Link to="/jobs/create" className="link">Create a job posting</Link>.</p>
         </div>
     </LandingContainer>
 }
