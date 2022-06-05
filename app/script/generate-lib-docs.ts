@@ -12,16 +12,23 @@ const VERSION = process.argv[3]
 const PATHS_FILE = process.argv[4]
 
 const CWD = process.cwd()
-const OUTPUT_DIR = path.join("library", NAME, VERSION)
+const OUTPUT_DIR = path.join("library")
 
 function to_absolute(p: string) {
     return path.resolve(CWD, p)
 }
 
-
 const BASE_TEMPLATE = fs.readFileSync(to_absolute(path.join("library", NAME, VERSION, "index.html")), "utf-8")
 
-const {render} = require(CWD + "/build/server/ssr.js")
+if (BASE_TEMPLATE.includes("src/libdoc/index.tsx")
+    || BASE_TEMPLATE.includes("src/tsdoc/index.tsx")
+    || !BASE_TEMPLATE.includes("/prism.js")
+    || !BASE_TEMPLATE.includes("<!--ssr-outlet-->")
+) {
+    throw new Error("The template doesn't look like we expect it to.")
+}
+
+const {render} = require(path.join(CWD, "library", NAME, VERSION, "server", "ssr.js"))
 
 async function main() {
     const paths = fs.readFileSync(PATHS_FILE, "utf-8").split("\n")

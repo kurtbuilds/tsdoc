@@ -91,18 +91,6 @@ function walk_dir(root: string): WalkResult {
             o[base] = identifier
         }
     }
-
-    //
-    // for (const file of fs.readdirSync(path)) {
-    //     const file_path = path + "/" + file
-    //     if (fs.statSync(file_path).isDirectory()) {
-    //         dirs.push(file_path)
-    //     } else {
-    //         files.push(file_path)
-    //     }
-    // }
-    //
-    // return [path, dirs.concat(files)]
     return {
         object, source_files,
     }
@@ -110,11 +98,6 @@ function walk_dir(root: string): WalkResult {
 
 
 function generate_target_file(name: string) {
-    const result = walk_dir(`stage/${name}/src`)
-    // const imports = result.source_files.map(({identifier, path}) => {
-    //     return `import ${identifier} from "../${path}?raw"`
-    // }).join("\n")
-    // const exports = result.source_files.map(f => f.identifier).join(", ")
     const template = `\
 import typedoc from "../../stage/typedoc.json"
 const files = import.meta.globEager(
@@ -135,8 +118,7 @@ async function generate_typedoc(name: string) {
 
 function generate_static_urls_file(name: string, version: string) {
     const paths: string[] = [
-        name,
-        path.join(name, version)
+        path.join("/", name, version)
     ]
     // add files
     //@ts-ignore
