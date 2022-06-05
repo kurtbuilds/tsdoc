@@ -1,0 +1,20 @@
+type User {
+    uuid: ID!
+    email: String!
+}
+
+type Query {
+    me: User
+}
+
+type Mutation {
+    "User authentication"
+    sign_up_password(email: String!, password: String!, timezone: String!): User!
+    sign_up_email(email: String!, timezone: String!): Boolean!
+    log_in_password(email: String!, password: String!): User!
+    log_in_token(token: String!): User!
+    send_login_email(email: String!): Boolean!
+    log_out: Boolean!
+
+    register_push_device(name: String!, device_token: String!, platform: String!): Boolean!
+}

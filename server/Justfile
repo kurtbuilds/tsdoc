@@ -1,0 +1,93 @@
+set dotenv-load := true
+export PATH := "./node_modules/.bin:" + env_var('PATH')
+
+help:
+    @just --list --unsorted
+
+install:
+    pnpm install
+alias i := install
+
+# Install all packages and setup project. With a proper .env file, make the project ready to run in development.
+bootstrap:
+    #!/bin/bash -e
+    function show() { dye -m -- "$@"; "$@"; }
+    show modenv init
+    # Key bytesize coming from https://security.stackexchange.com/questions/95972/what-are-requirements-for-hmac-secret-key
+    show modenv add JWT_SECRET=$(head -c 16 /dev/urandom | base64)
+    echo -n $(dye -g INPUT) Enter dbname:' '
+    export DBNAME=$(head -n1)
+    show createdb $DBNAME || true
+    show psql $DBNAME -c 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
+    show psql $DBNAME -c "ALTER DATABASE \"$DBNAME\" SET timezone TO 'UTC';"
+    show modenv add TYPEORM_URL=postgres://$USER@localhost:5432/$DBNAME
+    export DBNAME=${DBNAME}_test
+    show createdb $DBNAME || true
+    show psql $DBNAME -c 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
+    show psql $DBNAME -c "ALTER DATABASE \"$DBNAME\" SET timezone TO 'UTC';"
+    show modenv add TEST_TYPEORM_URL=postgres://$USER@localhost:5432/$DBNAME
+    show pnpm install
+    show modenv run just up
+
+# Run the server in development with auto-reload, or run a script.
+run script="":
+    #!/bin/bash -e
+    function show() { dye -m -- "$@"; "$@"; }
+    if test -z "{{script}}"; then
+        show watchexec -e ts,graphql,env -- modenv run -- node --trace-warnings --unhandled-rejections=strict \
+        -r esbuild-register \
+        src/main.ts
+    else
+        show node -r esbuild-register {{script}}
+    fi
+alias r := run
+
+check:
+    tsc --noEmit --extendedDiagnostics
+alias c := check
+
+test filter="":
+    TYPEORM_URL=$TEST_TYPEORM_URL \
+        mocha -r esbuild-register \
+        {{ if filter == "" { "" } else { "--grep " + filter } }} \
+        './{,!(node_modules)/**}/__tests__/*.ts'
+alias t := test
+
+# Create a new migration with the given name.
+migrate name:
+    node -r esbuild-register ./node_modules/typeorm/cli.js migration:generate -n {{name}}
+
+# Apply all pending migrations.
+up:
+    node -r esbuild-register ./node_modules/typeorm/cli.js migration:run
+    TYPEORM_URL=$TEST_TYPEORM_URL node -r esbuild-register ./node_modules/typeorm/cli.js migration:run
+
+# Reverse the last migration.
+down:
+    node -r esbuild-register ./node_modules/typeorm/cli.js migration:revert
+    TYPEORM_URL=$TEST_TYPEORM_URL node -r esbuild-register ./node_modules/typeorm/cli.js migration:revert
+
+# Open a psql prompt.
+sql:
+    psql $TYPEORM_URL
+
+# Build the app for production.
+release:
+    rm -rf build
+    esbuild --platform=node --bundle --external:pg-native --external:bcrypt \
+        --outfile=build/index.js src/main.ts
+    mkdir -p build/sql build/email_templates
+    fd -e sql . src/ -x cp {} build/sql/
+    fd -e html . src/ -x cp {} build/email_templates/
+    cp schema.graphql build/
+
+# Run the production version of the application.
+run-release:
+    node --unhandled-rejections=strict --trace-warnings build/index.js
+
+deploy:
+    render put-env <TODO> .env.production
+    render deploy <TODO>
+
+deploy-migrations:
+    modenv run -p -- node -r esbuild-register -r dotenv/config ./node_modules/typeorm/cli.js migration:run

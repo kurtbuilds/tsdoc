@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom"
 import {parameterize_url, safe_exec} from "src/lib/util"
 import {LandingContainer, SearchBar} from "src/tsdoc/landing"
 import libdoc_index from "../libdoc-index.json"
-import React, {FormEvent, useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {useQuery} from "src/app/page"
 
 
