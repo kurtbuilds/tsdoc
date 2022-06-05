@@ -59,17 +59,19 @@ export function LandingContainer({children}: { children: React.ReactNode }) {
 export interface SearchBarProps {
     initial?: string
     onSubmit: (query: string) => void
+    placeholder?: string
+    className?: string
 }
 
-export function SearchBar({onSubmit, initial}: SearchBarProps) {
-    const [query, setQuery] = React.useState(initial || "")
-    return <div className="max-w-xl w-full mx-auto">
+export function SearchBar({onSubmit, initial, className, placeholder}: SearchBarProps) {
+    const [query, set_query] = React.useState(initial || "")
+    return <div className={className}>
         <form action="#" onSubmit={(e) => {
             e.preventDefault()
             onSubmit(query)
         }}>
-            <input className="border w-full border-black rounded-lg p-1 border-2 mt-6"
-                   placeholder="Search..." value={query} onInput={e => setQuery(e.currentTarget.value)}/>
+            <input className="border w-full border-black rounded-lg p-1 border-2"
+                   placeholder={placeholder} value={query} onInput={e => set_query(e.currentTarget.value)}/>
         </form>
     </div>
 }
