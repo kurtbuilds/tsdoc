@@ -1,13 +1,15 @@
 import {defineConfig} from "vitest/config"
 import {imagetools} from "vite-imagetools"
-import {resolve} from "path"
+import {resolve, join, extname} from "path"
 import {homedir} from "os"
 import react from "@vitejs/plugin-react"
+//@ts-ignore
 import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
 import del from "rollup-plugin-delete"
-import fs from "fs"
+import {readFileSync, readdirSync} from "fs"
+import {do_rewrite, LIBDOC_REGEX} from "./src/lib/config"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -29,41 +31,60 @@ const HtmlPlugin = () => {
     }
 }
 
+function safe_readdirSync(p: string): string[] {
+    try {
+        return readdirSync(p)
+    } catch (e) {
+        return []
+    }
+}
+
+const AVAILABLE_LIBS = Object.fromEntries(safe_readdirSync("stage")
+    .filter(p => !p.includes("."))
+    .map(p => [p, JSON.parse(readFileSync(join("stage", p, "package.json"), "utf-8")).version]))
 
 function redirectAllCustom() {
     return {
-        name: "log-url",
+        name: "redirect-custom",
         configureServer(server: any) {
-            return () => {
-                server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
-                    // if (req.url?.endsWith(".ts")) {
-                    //     const path = join(__dirname, "public", req.url!, "./index.html")
-                    //     console.log(path)
-                    //     const body = readFileSync(path).toString()
-                    //     res.setHeader("Content-Type", "text/html")
-                    //     res.write(body)
-                    //     res.end()
-                    // } else {
+            server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
+                const url = (req as any).originalUrl
+                if (do_rewrite(url)) {
+                    console.log(url)
                     const handler = history({
                         disableDotRule: true,
-                        rewrites: [{from: /\/$/, to: () => "/index.html"}]
+                        rewrites: [
+                            {
+                                from: LIBDOC_REGEX, to: function (context) {
+                                    if (AVAILABLE_LIBS[context.match[2]] === context.match[3]) {
+                                        return "/src/libdoc/index.html"
+                                    } else {
+                                        return "/index.html"
+                                    }
+                                }
+                            }
+                        ],
                     })
                     handler(req as Request, res as Response, next)
-                    // }
-                })
-            }
+                } else {
+                    next()
+                }
+            })
         }
     }
 }
 
+// console.log(process.env)
 const BASE_FOLDER = process.env.BUILD_PACKAGE_NAME
     ? `${process.env.BUILD_PACKAGE_NAME}/${process.env.BUILD_PACKAGE_VERSION}/assets`
-    : "assets/"
+    : "assets"
 // const BASE_FOLDER = "assets"
 // https://vitejs.dev/config/
+const SSR_BUILD = process.argv.includes("--ssr")
 export default defineConfig({
     server: {
         https,
+        open: true,
         port: parseInt(process.env.PORT!),
         // host: "0.0.0.0",
         // origin: "*",
@@ -77,7 +98,7 @@ export default defineConfig({
         target: "es2020",
         rollupOptions: {
             output: {
-                entryFileNames: `${BASE_FOLDER}/[name].[hash].js`,
+                entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
                 assetFileNames: `${BASE_FOLDER}/[name].[hash].[ext]`
             },
@@ -85,8 +106,8 @@ export default defineConfig({
                 process.env.BUILD_PACKAGE_NAME
                     ? del({targets: "library/*", hook: "generateBundle"})
                     : undefined,
-            ]
-        }
+            ],
+        },
     },
     plugins: [
         imagetools(),
@@ -100,10 +121,8 @@ export default defineConfig({
         },
     },
     test: {
-        // match ts or tsx files
+        environment: "jsdom",
+        globals: true,
         include: ["src/**/__tests__/*.{ts,tsx}"],
-        transformMode: {
-            web: [/\.[jt]sx$/],
-        },
     },
 })

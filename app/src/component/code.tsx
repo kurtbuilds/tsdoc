@@ -26,7 +26,7 @@ interface CodeProps {
     id?: string
 }
 
-export function Code({code, language, line_numbers, well, id}: CodeProps) {
+export function CodeBlock({code, language, line_numbers, well, id}: CodeProps) {
     if (line_numbers && !id) {
         throw new Error("line_numbers requires id")
     }
@@ -38,7 +38,7 @@ export function Code({code, language, line_numbers, well, id}: CodeProps) {
     const ref = useRef(null)
 
     useEffect(() => {
-        (window as any).Prism.highlightElement(ref.current)
+        (window as any).Prism?.highlightElement(ref.current)
     }, [code])
 
     return <pre className={className} id={id}>

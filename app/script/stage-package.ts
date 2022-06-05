@@ -54,6 +54,7 @@ function* walk(root: string): Iterable<[string, string[], string[]]> {
     }
     yield [root, dirs, files]
     for (const d of dirs) {
+        //@ts-ignore
         yield* walk(d)
     }
 }
@@ -63,6 +64,7 @@ function walk_dir(root: string): WalkResult {
     const source_files: SourceFile[] = []
     const object: any = {}
 
+    //@ts-ignore
     for (const [cur, dirs, files] of walk(root)) {
         for (const dir of dirs) {
             const name = path.basename(dir)
@@ -71,6 +73,7 @@ function walk_dir(root: string): WalkResult {
         for (const file of files) {
             const relative = path.relative(root, cur)
             const identifier = path.relative(root, file)
+                //@ts-ignore
                 .replaceAll("/", "_")
                 .replaceAll("-", "_")
                 .slice(0, -path.extname(file).length)
@@ -80,6 +83,7 @@ function walk_dir(root: string): WalkResult {
             })
             let o = object
             for (let part of relative.split("/").filter(Boolean)) {
+                //@ts-ignore
                 part = part.replaceAll("-", "_")
                 o = o[part]
             }
@@ -112,7 +116,7 @@ function generate_target_file(name: string) {
     // }).join("\n")
     // const exports = result.source_files.map(f => f.identifier).join(", ")
     const template = `\
-import typedoc from "../stage/typedoc.json"
+import typedoc from "../../stage/typedoc.json"
 const files = import.meta.globEager(
     "/stage/${name}/src/**/*.ts",
     //@ts-ignore
@@ -121,7 +125,7 @@ const files = import.meta.globEager(
 export {typedoc}
 export default files
 `
-    fs.writeFileSync("src/target.ts", template)
+    fs.writeFileSync("src/libdoc/target.ts", template)
 }
 
 
@@ -135,6 +139,7 @@ function generate_static_urls_file(name: string, version: string) {
         path.join(name, version)
     ]
     // add files
+    //@ts-ignore
     for (const [cur, dirs, files] of walk(`stage/${name}/src`)) {
         for (const file of files) {
             paths.push(path.join("/", name, version, "file", "src", path.relative(`stage/${name}/src`, file)))
@@ -171,7 +176,7 @@ async function main() {
     const name = manifest.name
 
     if (process.env.DELETE) {
-        await subcommand(`cd stage && rm -rf *`)
+        await subcommand("cd stage && rm -rf *")
     }
     await subcommand(`cd stage && git clone ${url} ${name}`)
     await subcommand(`cd stage/${name} && git checkout tags/v${version} -b v${version}`)
