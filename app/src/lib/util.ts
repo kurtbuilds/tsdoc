@@ -14,6 +14,12 @@ export function slugify(s: string): string {
 }
 
 
+export function parameterize_url(url: string, params: {[key: string]: string}): string {
+    const args = Object.keys(params).map(k => `${k}=${encodeURIComponent(params[k])}`).join("&")
+    return url + "?" + args
+}
+
+
 export function timeout<T>(ms: number, promise: Promise<T>): Promise<T> {
     let id: NodeJS.Timeout | null = null
     const t = new Promise<T>((resolve, reject) => {
