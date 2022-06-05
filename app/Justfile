@@ -48,7 +48,6 @@ lib:
     export BUILD_PACKAGE_VERSION=$(cat stage/$BUILD_PACKAGE_NAME/package.json | jq -r .version)
 
     show modenv run -p -- vite build --base /$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/ --outDir library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/
-    exit 0
     show vite build --outDir library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/server --ssr src/libdoc/ssr.tsx
     show node -r esbuild-register script/generate-lib-docs.ts $BUILD_PACKAGE_NAME $BUILD_PACKAGE_VERSION stage/static_urls.txt
     show rm -rf library/$BUILD_PACKAGE_NAME/$BUILD_PACKAGE_VERSION/server

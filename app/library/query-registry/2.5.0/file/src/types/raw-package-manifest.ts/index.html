@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+<!--    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">-->
+<!--    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">-->
+<!--    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">-->
+<!--    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">-->
+<!--    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">-->
+<!--    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">-->
+<!--    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">-->
+<!--    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">-->
+<!--    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">-->
+<!--    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">-->
+<!--    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">-->
+<!--    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">-->
+<!--    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">-->
+<!--    <link rel="manifest" href="/manifest.json">-->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="JBAJBJJV"
+            defer></script>
+    <script src="/query-registry/2.5.0/prism.js" defer data-manual="true"></script>
+    <title>Tsdoc</title>
+  <script type="module" crossorigin src="/query-registry/2.5.0/assets/index.47369bf8.js"></script>
+  <link rel="stylesheet" href="/query-registry/2.5.0/assets/index.6fe06a0c.css">
+</head>
+<body>
+<div id="root"><div class="flex flex-col w-full"><div class="bg-gray-400 dark:bg-gray-600 p-2"><a class="" href="/">Site-wide navigation</a></div><pre class="line-numbers linkable-line-numbers language-typescript" id="source"><code class="language-typescript">import { DistInfo } from &#x27;./dist-info&#x27;;
+import { NpmOperationalInternal } from &#x27;./npm-operational-internal&#x27;;
+import { PackageJSON } from &#x27;./package-json&#x27;;
+import { Person } from &#x27;./person&#x27;;
+
+/**
+ * `RawPackageManifest` represents the manifest, as returned by the registry,
+ * describing a specific version of a package.
+ *
+ * @remarks
+ * For some packages, especially legacy ones,
+ * the properties may be mistyped due to incorrect data present on the registry.
+ *
+ * @see {@link https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#getpackageversion}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#abbreviated-version-object}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#full-metadata-format}
+ * @see {@link https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#version}
+ * @see {@link PackageJSON}
+ */
+export interface RawPackageManifest extends PackageJSON {
+    /** Package version ID (for example, `foo@1.0.0` or `@bar/baz@1.0.0`) */
+    readonly _id: string;
+
+    /** Package name */
+    readonly name: string;
+
+    /** Package version number */
+    readonly version: string;
+
+    /**
+     * Distribution data from the registry
+     *
+     * @see {@link DistInfo}
+     */
+    readonly dist: DistInfo;
+
+    /** Commit hash corresponding to the published version */
+    readonly gitHead?: string;
+
+    /**
+     * User who published this package version
+     *
+     * @see {@link Person}
+     */
+    readonly _npmUser: Person;
+
+    /** Node version used when publishing */
+    readonly _nodeVersion?: string;
+
+    /** npm version used when publishing */
+    readonly _npmVersion?: string;
+
+    /**
+     * Internal npm data
+     *
+     * @see {@link NpmOperationalInternal}
+     */
+    readonly _npmOperationalInternal?: NpmOperationalInternal;
+
+    /** True if the package has a shrinkwrap file */
+    readonly _hasShrinkwrap?: boolean;
+}
+</code></pre></div></div>
+
+</body>
+</html>

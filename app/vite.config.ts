@@ -41,10 +41,8 @@ const ReplaceHtmlEnvVar = () => {
     return {
         name: "html-transform",
         transformIndexHtml(html: string) {
-            console.log("html", html)
             // @ts-ignore
             return html.replace(/%([^%]+?)%/g, function (match, p1) {
-                return "foobar"
                 return process.env[p1]
             })
         },
@@ -121,11 +119,6 @@ const BASE_CONFIG: UserConfig = {
         outDir: "build",
         target: "es2020",
         rollupOptions: {
-            // input: {
-            //     index: "index.html",
-            //     libdoc: resolve("src/libdoc/index.tsx"),
-            //     tsdoc: resolve("src/tsdoc/index.tsx"),
-            // },
             plugins: [
                 // if we're building a library,
                 // this deletes all the extra shit from public.
@@ -140,6 +133,7 @@ const BASE_CONFIG: UserConfig = {
         react(),
         redirectAllCustom(),
         ReplaceHtmlEnvVar(),
+        SwapHtmlFileForLibdocOne,
     ],
     resolve: {
         alias: {
@@ -153,11 +147,11 @@ const BASE_CONFIG: UserConfig = {
     },
 }
 
-if (process.env.BUILD_PACKAGE_NAME) {
-    BASE_CONFIG.plugins!.push(SwapHtmlFileForLibdocOne)
-} else if (SSR_BUILD) {
-
-} else {
-    // dev server build
-}
-export default defineConfig()
+// if (process.env.BUILD_PACKAGE_NAME) {
+//     BASE_CONFIG.plugins!.push(SwapHtmlFileForLibdocOne)
+// } else if (SSR_BUILD) {
+//
+// } else {
+//     // dev server build
+// }
+export default defineConfig(BASE_CONFIG)
