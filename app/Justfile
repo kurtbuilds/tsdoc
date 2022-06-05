@@ -29,6 +29,7 @@ test FILTER="":
 alias t := test
 
 run:
+    just gen-index
     vite
 alias r := run
 
@@ -39,6 +40,9 @@ clean:
 
 stage:
     node -r esbuild-register script/stage-package.ts
+
+gen-index:
+    node -r esbuild-register script/generate-libdoc-index.ts
 
 lib:
     #!/bin/bash -e
@@ -67,6 +71,7 @@ watch:
 release:
     #rm -rf stage
     NODE_ENV= pnpm install
+    just gen-index
     vite build --outDir build
     vite build --outDir build/server --ssr src/tsdoc/ssr.tsx
     node -r esbuild-register script/generate-static.ts

@@ -2,6 +2,7 @@ import {Logo} from "src/app/logo"
 import {FooterBasic} from "src/component"
 import {Link} from "react-router-dom"
 import {DarkModeToggle} from "src/app/theme_context"
+import libdoc_index from "../tsdoc/libdoc-index.json"
 
 
 export function MenuPopover() {
@@ -65,12 +66,17 @@ export function Landing() {
             <div className="grid grid-cols-2 mt-6 max-w-xl mx-auto">
                 <div className="">
                     <h3 className="font-bold text-xl">Recent Packages</h3>
-                    <a className="text-blue-500 hover:text-blue-700 block" href="/query-registry/foobar">foobar</a>
-                    <a className="text-blue-500 hover:text-blue-700" href="/query-registry/2.5.0">query-registry</a>
+                    {libdoc_index.libraries.map(l => {
+                        return <a key={l.name} className="text-blue-500 hover:text-blue-700"
+                                  href={l.path}>{l.name}</a>
+                    })}
                 </div>
                 <div>
-                    <h3 className="font-bold text-xl">Recent Packages</h3>
-                    <Link className="text-blue-500 hover:text-blue-700" to="/query-registry/2.5.0">query-registry</Link>
+                    <h3 className="font-bold text-xl">Popular Packages</h3>
+                    {libdoc_index.libraries.map(l => {
+                        return <a key={l.name} className="text-blue-500 hover:text-blue-700"
+                                  href={l.path}>{l.name}</a>
+                    })}
                 </div>
             </div>
             <div>
