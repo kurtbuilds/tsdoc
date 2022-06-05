@@ -8,7 +8,8 @@ import history from "connect-history-api-fallback"
 import {NextFunction, Request, Response} from "express-serve-static-core"
 import {IncomingMessage, ServerResponse} from "http"
 import del from "rollup-plugin-delete"
-import {readFileSync} from "fs"
+import {readFileSync, readdirSync} from "fs"
+import {do_rewrite, LIBDOC_REGEX} from "./src/lib/config"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -30,9 +31,9 @@ const HtmlPlugin = () => {
     }
 }
 
-
-const LIBDOC_REGEX = new RegExp("/[^a-zA-Z_-]+/[^/]+")
-const LIBDOC_PATH_REGEX = new RegExp("/[^/]+/[^/]+/(file|function|interface|class)/")
+const AVAILABLE_LIBS = Object.fromEntries(readdirSync("stage")
+    .filter(p => !p.includes("."))
+    .map(p => [p, JSON.parse(readFileSync(join("stage", p, "package.json"), "utf-8")).version]))
 
 function redirectAllCustom() {
     return {
@@ -40,22 +41,24 @@ function redirectAllCustom() {
         configureServer(server: any) {
             server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: NextFunction) => {
                 const url = (req as any).originalUrl
-                if (LIBDOC_REGEX.test(url) || LIBDOC_PATH_REGEX.test(url)) {
+                if (do_rewrite(url)) {
                     console.log(url)
                     const handler = history({
                         disableDotRule: true,
                         rewrites: [
                             {
-                                from: /.*/, to: function (context) {
-                                    console.log("context", context.match)
-                                    return "/src/libdoc/index.html"
+                                from: LIBDOC_REGEX, to: function (context) {
+                                    if (AVAILABLE_LIBS[context.match[2]] === context.match[3]) {
+                                        return "/src/libdoc/index.html"
+                                    } else {
+                                        return "/index.html"
+                                    }
                                 }
                             }
                         ],
                     })
                     handler(req as Request, res as Response, next)
                 } else {
-
                     next()
                 }
             })
@@ -86,9 +89,6 @@ export default defineConfig({
         outDir: "build",
         target: "es2020",
         rollupOptions: {
-            input: {
-                libdoc: resolve("src", "libdoc", "index.html"),
-            },
             output: {
                 entryFileNames: SSR_BUILD ? "[name].js" : `${BASE_FOLDER}/[name].[hash].js`,
                 chunkFileNames: `${BASE_FOLDER}/[name].[hash].js`,
@@ -113,10 +113,8 @@ export default defineConfig({
         },
     },
     test: {
-        // match ts or tsx files
+        environment: "jsdom",
+        globals: true,
         include: ["src/**/__tests__/*.{ts,tsx}"],
-        transformMode: {
-            web: [/\.[jt]sx$/],
-        },
     },
 })

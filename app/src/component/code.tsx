@@ -26,7 +26,7 @@ interface CodeProps {
     id?: string
 }
 
-export function Code({code, language, line_numbers, well, id}: CodeProps) {
+export function CodeBlock({code, language, line_numbers, well, id}: CodeProps) {
     if (line_numbers && !id) {
         throw new Error("line_numbers requires id")
     }

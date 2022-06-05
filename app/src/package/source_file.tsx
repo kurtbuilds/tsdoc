@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom"
 import target from "src/libdoc/target"
 import {PackageParams} from "src/package/module"
 import {Page} from "src/app/page"
-import {Code} from "src/component/code"
+import {CodeBlock} from "src/component/code"
 
 
 export function SourceFile() {
@@ -11,6 +11,6 @@ export function SourceFile() {
     const identifier = "/stage/query-registry/" + source_path
     const inner = target[identifier] as any as string
     return <Page>
-        <Code line_numbers={true} code={inner} language="typescript" id="source"/>
+        <CodeBlock line_numbers={true} code={inner} language="typescript" id="source"/>
     </Page>
 }

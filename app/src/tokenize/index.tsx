@@ -2,7 +2,7 @@ import {ReactChild} from "react"
 import {Type} from "src/package/type"
 import {infallible} from "@kurtbuilds/lib"
 import { Link } from "react-router-dom"
-import {Code} from "src/component/code"
+import {CodeBlock} from "src/component/code"
 
 interface NextToken {
     content: string,
@@ -39,6 +39,7 @@ export function get_next_token(comment: string, regexes: RegExp[]): NextToken {
     }
 }
 
+
 export function tokenize(comment: string): ReactChild[] {
     comment = comment.trim()
     const regexes = [
@@ -54,7 +55,7 @@ export function tokenize(comment: string): ReactChild[] {
     while (comment) {
         const next_token = get_next_token(comment, regexes)
         if (next_token.regex_index === 0) {
-            tokens.push(<Code key={i} well={true} code={next_token.groups[2]} language="typescript"/>)
+            tokens.push(<CodeBlock key={i} well={true} code={next_token.groups[2]} language="typescript"/>)
         } else if (next_token.regex_index === 1) {
             tokens.push(<br key={i}/>)
         } else if (next_token.regex_index === 2) {
