@@ -6,7 +6,7 @@ import {UserState} from "../app/user_state"
 import {useEffect} from "react"
 import {BasePackageParams} from "src/package/type"
 import {Search} from "src/tsdoc/search"
-import {BuildQueue} from "src/tsdoc/build"
+import {BuildQueue} from "src/tsdoc/build_queue"
 import {CreateJob, JobBoard} from "src/tsdoc/job"
 
 export function Private({children}: { children: JSX.Element }) {
