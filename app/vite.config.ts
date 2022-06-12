@@ -12,6 +12,8 @@ import del from "rollup-plugin-delete"
 import {readFileSync} from "fs"
 import {do_rewrite, LIBDOC_REGEX} from "./src/lib/config"
 import {safe_readdirSync} from "./src/lib/script_util"
+//@ts-ignore
+import {PreRenderedAsset} from "rollup"
 
 const expanduser = (text: string) => text.replace(/^~/, homedir())
 
@@ -108,6 +110,7 @@ const BASE_CONFIG: UserConfig = {
             "/gql": "http://127.0.0.1:5000",
         },
     },
+    base: "",
     build: {
         outDir: "build",
         target: "es2020",

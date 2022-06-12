@@ -8,3 +8,6 @@ target/
 *.p8
 *.pem
 .terraform.lock.hcl
+
+.env*
+!.env.example
