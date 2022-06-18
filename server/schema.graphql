@@ -17,7 +17,7 @@ type BuildJob {
 }
 
 type CreateDocsBuild {
-    build_id: Boolean!
+    build_id: String!
 }
 
 type Query {
