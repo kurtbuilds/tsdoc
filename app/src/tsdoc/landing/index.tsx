@@ -61,17 +61,23 @@ export interface SearchBarProps {
     onSubmit: (query: string) => void
     placeholder?: string
     className?: string
+    button?: boolean
 }
 
-export function SearchBar({onSubmit, initial, className, placeholder}: SearchBarProps) {
+export function SearchBar({onSubmit, initial, className, placeholder, button}: SearchBarProps) {
     const [query, set_query] = React.useState(initial || "")
+    let button_el
+    if (button) {
+        button_el = <button type="submit" className="btn btn-primary whitespace-nowrap">Make Docs</button>
+    }
     return <div className={className}>
-        <form action="#" onSubmit={(e) => {
+        <form action="#" className="flex space-x-2" onSubmit={(e) => {
             e.preventDefault()
             onSubmit(query)
         }}>
             <input className="border w-full border-black rounded-lg p-1 border-2"
                    placeholder={placeholder} value={query} onInput={e => set_query(e.currentTarget.value)}/>
+            {button_el}
         </form>
     </div>
 }

@@ -3,8 +3,30 @@ type User {
     email: String!
 }
 
+type JobPosting {
+    company: String!,
+    description: String!,
+    apply_link: String!,
+}
+
+
+type BuildJob {
+    package: String!,
+    version: String!,
+    status: String!,
+}
+
+type CreateDocsBuild {
+    build_id: Boolean!
+}
+
 type Query {
     me: User
+
+    current_queue(package: String!, version: String): [BuildJob!]!
+
+    job_postings: [JobPosting!]!
+    job_posting(id: String!): [JobPosting!]!
 }
 
 type Mutation {
@@ -16,5 +38,6 @@ type Mutation {
     send_login_email(email: String!): Boolean!
     log_out: Boolean!
 
-    register_push_device(name: String!, device_token: String!, platform: String!): Boolean!
+    create_docs_build(package: String!, version: String): CreateDocsBuild!
+    create_jobs_post(package: String!, version: String): String!
 }

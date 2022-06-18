@@ -1,6 +1,6 @@
 import {IResolvers} from "@graphql-tools/utils"
 import {auth_resolvers} from "src/auth/auth.resolver"
-import {push_notification_resolvers} from "src/push_notification/resolver"
+import {doc_build_resolvers} from "src/doc_build/resolver"
 import {deep_assign} from "src/lib/util"
 
 
@@ -10,8 +10,8 @@ const exported_resolvers: IResolvers = {
 }
 
 for (const resolver of [
+    doc_build_resolvers,
     auth_resolvers,
-    push_notification_resolvers,
 ]) {
     deep_assign(exported_resolvers, resolver)
 }
