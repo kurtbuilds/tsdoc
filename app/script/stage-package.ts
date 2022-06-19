@@ -146,30 +146,29 @@ function generate_static_urls_file(name: string, version: string) {
 }
 
 async function main() {
-    const _metadata = await getRegistryMetadata()
-
-    const _results = await searchPackages({
-        query: {text: "typescript"},
-    })
-    const manifest = await getPackageManifest({ name: "query-registry" })
+    // const _metadata = await getRegistryMetadata()
+    //
+    // const _results = await searchPackages({
+    //     query: {text: "typescript"},
+    // })
+    const package_name = process.argv[1]
+    const requested_version = process.argv[2]
+    const manifest = await getPackageManifest({ name: package_name })
 
     const url = manifest.gitRepository?.url
-    const version = manifest.version
+    const latest_version = manifest.version
     const name = manifest.name
 
-    if (process.env.DELETE) {
-        await subcommand("cd stage && rm -rf *")
-    }
+    await subcommand("mkdir -p stage")
+    await subcommand("cd stage && rm -rf *")
     await subcommand(`cd stage && git clone ${url} ${name}`)
-    await subcommand(`cd stage/${name} && git checkout tags/v${version} -b v${version}`)
+    await subcommand(`cd stage/${name} && git checkout tags/v${latest_version} -b v${latest_version}`)
     await subcommand(`cd stage/${name} && pnpm install --config.auto-install-peers=true`)
     await subcommand(`cd stage/${name} && pnpm install @types/node`)
 
-    console.log(name)
-    console.log(version)
     await generate_typedoc(name)
     generate_target_file(name)
-    generate_static_urls_file(name, version)
+    generate_static_urls_file(name, latest_version)
 }
 
 main().catch(e => {
