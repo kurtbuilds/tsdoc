@@ -25,6 +25,7 @@ export const doc_build_resolvers: IResolvers = {
                 package: args.package,
                 version: args.version,
             })
+
             return  {
                 build_id: job.uuid,
             }

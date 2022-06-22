@@ -4,7 +4,6 @@ import {ENV} from "@kurtbuilds/env"
 import {exec} from "child_process"
 import path from "path"
 import fs from "fs/promises"
-import {stringify} from "querystring"
 
 
 interface CommandResult {
@@ -13,7 +12,7 @@ interface CommandResult {
     stderr: string,
 }
 
-async function subcommand(command: string): Promise<CommandResult> {
+export async function subcommand(command: string): Promise<CommandResult> {
     return new Promise((resolve, reject) => {
         console.log(command)
         const process = exec(command)
@@ -21,11 +20,15 @@ async function subcommand(command: string): Promise<CommandResult> {
         let stderr = ""
 
         process.stdout?.on("data", (data) => {
-            stdout += data.toString()
+            const s = data.toString()
+            console.log(s.trim())
+            stdout += s
         })
 
         process.stderr?.on("data", (data) => {
-            stderr += data.toString()
+            const s = data.toString()
+            console.log(s.trim())
+            stderr += s
         })
 
         process.on("exit", (code) => {
@@ -72,7 +75,8 @@ const GITHUB_TOKEN = ENV.GITHUB_TOKEN
 
 export async function handle_build_docs(job: Job): Promise<JobResult<BuildJobSuccess>> {
     const data = job.data as BuildJobData
-    const package_name = data.package
+    // const package_name = data.package
+    const package_name = "@types/qrcode"
     const version = data.version
     const repo_exists = await exists(REPO_PATH)
     const GIT_REPO = `https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/kurtbuilds/tsdoc`
@@ -89,7 +93,7 @@ export async function handle_build_docs(job: Job): Promise<JobResult<BuildJobSuc
 
     // what next?
     try {
-        await subcommand(`cd ${APP_DIR} && just stage`)
+        await subcommand(`cd ${APP_DIR} && just stage ${package_name}`)
     } catch (_e) {
         const e = _e as CommandResult
         console.error("Command failed", e.stderr, e.stdout)

@@ -1,4 +1,4 @@
-import {Class, Constant, Func, Interface, Property} from "src/package/type"
+import {Class, Constant, Func, Interface, Property} from "src/typedoc/type"
 
 
 interface ExtractResult {
