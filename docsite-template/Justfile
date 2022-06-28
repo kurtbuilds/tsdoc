@@ -1,0 +1,9 @@
+set dotenv-load := true
+export PATH := "./node_modules/.bin:" + env_var('PATH')
+
+bootstrap:
+    pnpm install --config.auto-install-peers=true
+    modenv init
+
+run:
+    npm run dev

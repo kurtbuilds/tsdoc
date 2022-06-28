@@ -2,7 +2,7 @@ import {Logo} from "src/app/logo"
 import {FooterBasic} from "src/component"
 import {Link, useNavigate} from "react-router-dom"
 import {DarkModeToggle} from "src/app/theme_context"
-import libdoc_index from "../libdoc-index.json"
+import libdoc_index from "../docsite-index.json"
 import {parameterize_url} from "src/lib/util"
 import React from "react"
 

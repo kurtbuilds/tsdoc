@@ -1,7 +1,7 @@
 import {PackageParams} from "src/package/module"
 import {useParams} from "react-router-dom"
 import {tokenize, tokenize_type} from "src/tokenize"
-import {typedoc} from "src/libdoc/target"
+import {typedoc} from "src/docsite/target"
 import {extract_package, normalize_filepath} from "src/package/extract"
 import {SourceButton} from "src/component/code"
 import {Container} from "src/package/container"

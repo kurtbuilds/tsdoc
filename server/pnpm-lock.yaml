@@ -13,10 +13,12 @@ specifiers:
   '@types/bcrypt': ^5
   '@types/body-parser': ^1
   '@types/cookie-parser': ^1
+  '@types/dompurify': ^2.3.3
   '@types/express': ^4
   '@types/jsonwebtoken': ^8
   '@types/jwk-to-pem': ^2
   '@types/luxon': ^1
+  '@types/marked': ^4.0.3
   '@types/mocha': ^8
   '@types/node': ^16
   '@types/pg': ^8
@@ -78,10 +80,12 @@ devDependencies:
   '@types/bcrypt': 5.0.0
   '@types/body-parser': 1.19.2
   '@types/cookie-parser': 1.4.2
+  '@types/dompurify': 2.3.3
   '@types/express': 4.17.13
   '@types/jsonwebtoken': 8.5.6
   '@types/jwk-to-pem': 2.0.1
   '@types/luxon': 1.27.1
+  '@types/marked': 4.0.3
   '@types/mocha': 8.2.3
   '@types/node': 16.11.19
   '@types/pg': 8.6.3
@@ -1082,6 +1086,12 @@ packages:
     resolution: {integrity: sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==}
     dev: false
 
+  /@types/dompurify/2.3.3:
+    resolution: {integrity: sha512-nnVQSgRVuZ/843oAfhA25eRSNzUFcBPk/LOiw5gm8mD9/X7CNcbRkQu/OsjCewO8+VIYfPxUnXvPEVGenw14+w==}
+    dependencies:
+      '@types/trusted-types': 2.0.2
+    dev: true
+
   /@types/express-serve-static-core/4.17.27:
     resolution: {integrity: sha512-e/sVallzUTPdyOTiqi8O8pMdBBphscvI6E4JYaKlja4Lm+zh7UFSSdW5VMkRbhDtmrONqOUHOXRguPsDckzxNA==}
     dependencies:
@@ -1119,6 +1129,10 @@ packages:
     resolution: {integrity: sha512-cPiXpOvPFDr2edMnOXlz3UBDApwUfR+cpizvxCy0n3vp9bz/qe8BWzHPIEFcy+ogUOyjKuCISgyq77ELZPmkkg==}
     dev: true
 
+  /@types/marked/4.0.3:
+    resolution: {integrity: sha512-HnMWQkLJEf/PnxZIfbm0yGJRRZYYMhb++O9M36UCTA9z53uPvVoSlAwJr3XOpDEryb7Hwl1qAx/MV6YIW1RXxg==}
+    dev: true
+
   /@types/mime/1.3.2:
     resolution: {integrity: sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==}
 
@@ -1152,6 +1166,10 @@ packages:
     dependencies:
       '@types/mime': 1.3.2
       '@types/node': 16.11.19
+
+  /@types/trusted-types/2.0.2:
+    resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
+    dev: true
 
   /@types/zen-observable/0.8.3:
     resolution: {integrity: sha512-fbF6oTd4sGGy0xjHPKAt+eS2CrxJ3+6gQ3FGcBoIJR2TLAyCkCyI8JqZNy+FeON0AhVgNJoUumVoZQjBFUqHkw==}

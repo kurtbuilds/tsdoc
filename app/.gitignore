@@ -7,4 +7,4 @@ dist-ssr
 .env*
 !.env.example
 stage
-src/tsdoc/libdoc-index.json
+src/tsdoc/docsite-index.json

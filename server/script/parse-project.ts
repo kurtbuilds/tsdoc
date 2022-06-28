@@ -1,8 +1,10 @@
-import {index_source_files} from "../src/doc_build/index_js"
 import path from "path"
 import TypeDoc from "typedoc"
 import {readFileSync, statSync, writeFileSync} from "fs"
 import {create_static_urls} from "../src/doc_build/static_urls"
+//import marked
+import {marked} from "marked"
+import {sanitize} from "dompurify"
 
 
 export function existsSync(path: string): boolean {
@@ -58,6 +60,18 @@ async function run_typedoc(project_path: string) {
 }
 
 
+function convert_readme(project_path: string): string {
+    const readme_path = path.join(project_path, "README.md")
+    if (existsSync(readme_path)) {
+        const readme_md = readFileSync(readme_path, "utf-8")
+        const readme_html = marked(readme_md)
+        return sanitize(readme_html)
+    }
+    throw new Error("Could not find README.")
+
+
+}
+
 
 
 async function main() {
@@ -68,8 +82,12 @@ async function main() {
     const typedoc = await run_typedoc(path.join(working_dir, "DefinitelyTyped/types/qrcode"))
     writeFileSync(path.join(working_dir, "typedoc.json"), JSON.stringify(typedoc, null, 2))
 
-    const static_urls = create_static_urls("workspace/qrcode", "qrcode", "1.5.0", typedoc)
+    const project_path = path.join(working_dir, "qrcode")
+    const static_urls = create_static_urls(project_path, "qrcode", "1.5.0", typedoc)
     writeFileSync(path.join(working_dir, "static_urls.txt"), static_urls.join("\n"))
+
+    const readme = convert_readme(project_path)
+    writeFileSync(path.join(working_dir, "readme.html"), readme)
 }
 
 main()

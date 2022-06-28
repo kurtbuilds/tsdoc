@@ -29,7 +29,7 @@ async function main() {
         })
     }
     console.log(JSON.stringify(result, null, 4))
-    const output_fpath = "src/tsdoc/libdoc-index.json"
+    const output_fpath = "src/tsdoc/docsite-index.json"
     fs.writeFileSync(output_fpath, JSON.stringify(result))
     console.log(`${output_fpath}: Wrote file.`)
 }

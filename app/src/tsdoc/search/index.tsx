@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom"
 import {parameterize_url, safe_exec} from "src/lib/util"
 import {LandingContainer, SearchBar} from "src/tsdoc/landing"
-import libdoc_index from "../libdoc-index.json"
+import libdoc_index from "../docsite-index.json"
 import React, {useEffect, useState} from "react"
 import {useQuery} from "src/app/page"
 import {gql_fetch3} from "src/gql"
